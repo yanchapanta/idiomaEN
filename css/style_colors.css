@@ -6,7 +6,7 @@
 body{
     background-color: #0A1F34;
     color: white;
-    width: 99%;
+    width: 95%;
     margin: auto;
 }
 .title{
@@ -52,7 +52,7 @@ body{
   }
 /*Modificando botones centrales*/
 .btn_container{
-    width: 50%;
+    width: 62%;
     
     margin: auto;
     height: 400px;
@@ -165,6 +165,35 @@ body{
     /**
     */
 }
+#numberA{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+   font-size: 7rem;
+   color: wheat;
+   border-radius: 50%;   
+   border: 1px solid red;
+   text-align: center;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   
+}
+#numberA:hover{
+    border: 1px double red;
+    color: wheat;
+    background-color: rgba(128, 255, 0, 0.267);
+
+}
+.img_animation{
+
+}
 @keyframes example {
     0%   {transform: rotate(0deg);}
   25%  {transform: rotate(25deg);}
@@ -182,4 +211,24 @@ body{
     right: 0;
     margin: auto;
     padding: 1rem;
+  }
+
+  /*
+  Tabla de Contenido de prases
+  */
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    color: black;
   }

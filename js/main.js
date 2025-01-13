@@ -1,3 +1,6 @@
+let variableStaticA="Hello world";
+let variableStaticB="dos";
+
 //LISTA
 let listWord=[
     ["1","	Aqua/Cyan","	Aqua/Cian","	The sky is a clear aqua","	El cielo es de un azul claro","	Aqua es una forma más poética de decir 'azul claro'"],
@@ -43,14 +46,18 @@ let numAleatorio1=numAleatorio(),
     speakRamdonWord=listWord[numAleatorio1][1],  
     speakRamdonWordES=listWord[numAleatorio1][2],  
     speakRamdon=listWord[numAleatorio1][3],  
-    spanishRamdon=listWord[numAleatorio1][4];   
+    spanishRamdon=listWord[numAleatorio1][4],
+    numberA=document.getElementById("numberA");   
+    variableStaticA=numAleatorio1;
 
 
 //CARGA DEFAULT
 document.addEventListener("DOMContentLoaded",(e)=>{       
-    textToSpeak();   
+    textToSpeak(); 
+    numberA.textContent= speakRamdonNum;
+    numberA.setAttribute("href",`#fila${speakRamdonNum}`);
 
-});   
+});  
 function numAleatorio(){
     let numberSelected = 0;
     for (let i = 0; i < listWord.length; i++) {        
@@ -79,31 +86,6 @@ document.getElementById('btn_showMe').addEventListener("click",()=>{
    textEscrito.classList.add("showYes")   
    wordEnglish.classList.add("showYes")   
 });
-
-//BOTON siguiente
-let btn_next=document.getElementById('btn_next');
-let toText = document.getElementById("toText");
-
-btn_next.addEventListener("click",()=>{
-   
-    numAleatorio1=numAleatorio()
-    speakRamdonNum=listWord[numAleatorio1][0],  
-    speakRamdonWord=listWord[numAleatorio1][1],  
-    speakRamdonWordES=listWord[numAleatorio1][2],  
-    speakRamdon=listWord[numAleatorio1][3],  
-    spanishRamdon=listWord[numAleatorio1][4];      
-    textToSpeak();
-    textEscrito.value=speakRamdon;
-    wordEnglish.textContent=speakRamdonWord; 
-    wordSpanish.textContent=speakRamdonWordES;
-
-    toTextSpanish.value=" ";
-    wordSpanish.textContent=" ";
-    textEscrito.classList.remove("showYes");
-    wordEnglish.classList.remove("showYes"); 
-});
-
-
 
 //BOTON ESPAÑOL
 let toTextSpanish=document.getElementById("toTextSpanish");
@@ -135,4 +117,106 @@ function textToSpeak(){
     */ 
 }
 
- 
+ /**
+  * LISTA CONTENIDO DE FRASES
+  */
+ const tblBody = document.createElement("tbody");
+ const tabla=document.getElementById("tablas");
+
+ // Crea las celdas
+for (let i = 0; i < listWord.length; i++) {
+   // Crea las hileras de la tabla
+   const hilera = document.createElement("tr");
+        hilera.setAttribute("id",`fila${i}`);
+
+   for (let j = 0; j < listWord[0].length; j++) {
+     // Crea un elemento <td> y un nodo de texto, haz que el nodo de
+     // texto sea el contenido de <td>, ubica el elemento <td> al final
+     // de la hilera de la tabla
+     const celda = document.createElement("td");
+     const textoCelda = document.createTextNode(listWord[i][j]
+     );
+     celda.appendChild(textoCelda);
+     hilera.appendChild(celda);
+   }
+   
+   // agrega la hilera al final de la tabla (al final del elemento tblbody)
+   tblBody.appendChild(hilera);
+   
+}
+tabla.appendChild(tblBody);
+
+let fila=" ";
+let ban=1;
+numberA.addEventListener("click",()=>{ 
+
+    console.log("fila",fila)
+    
+    fila=document.getElementById(`fila${numAleatorio1}`);
+    //  fila.style.backgroundColor="red";
+    for (let i = 0; i < listWord.length; i++) {
+        
+        
+        if(i === numAleatorio1){
+            fila.style.backgroundColor="red";
+            variableStaticA=numAleatorio1;
+        }
+        for (let j = 0; j < listWord[0].length; j++) {
+
+        }
+        
+     }
+
+    
+});
+console.log(variableStaticA)
+console.log(variableStaticB)
+//BOTON siguiente
+let btn_next=document.getElementById('btn_next');
+let toText = document.getElementById("toText");
+
+btn_next.addEventListener("click",()=>{
+    fila=document.getElementById(`fila${numAleatorio1}`);
+    for (let i = 0; i < listWord.length; i++) {
+        
+        if(i !== numAleatorio1){
+            console.log("direrente",i,numAleatorio1)
+            fila.style.backgroundColor="green";
+        }
+        if(i === numAleatorio1){
+            fila.style.backgroundColor="red";
+            
+        }
+        for (let j = 0; j < listWord[0].length; j++) {
+
+        }
+        
+     }
+
+    fila=document.getElementById(`fila${numAleatorio1}`);
+    numAleatorio1=numAleatorio()
+    speakRamdonNum=listWord[numAleatorio1][0],  
+    speakRamdonWord=listWord[numAleatorio1][1],  
+    speakRamdonWordES=listWord[numAleatorio1][2],  
+    speakRamdon=listWord[numAleatorio1][3],  
+    spanishRamdon=listWord[numAleatorio1][4];      
+    textToSpeak();
+    variableStaticA=numAleatorio1;
+    console.log(variableStaticA)
+    textEscrito.value=speakRamdon;
+    wordEnglish.textContent=speakRamdonWord; 
+    wordSpanish.textContent=speakRamdonWordES;
+    numberA.textContent=  speakRamdonNum;
+    numberA.setAttribute("href",`#fila${speakRamdonNum}`);
+    //fila.style.backgroundColor="red";
+
+    toTextSpanish.value=" ";
+    wordSpanish.textContent=" ";
+    textEscrito.classList.remove("showYes");
+    wordEnglish.classList.remove("showYes"); 
+
+    
+     
+
+});
+
