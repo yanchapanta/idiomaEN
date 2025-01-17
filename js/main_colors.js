@@ -116,6 +116,23 @@ function textToSpeak(){
         Google UK English Male _ en-GB 
     */ 
 }
+function textToSpeakword(){
+    //utterance.text =listWord[numAleatorio()][2];   
+    utterance.text =speakRamdonWord;
+    utterance.rate="0.7";
+    utterance.pitch = "1.1";  
+    utterance.name = "Google US English";
+    utterance.voiceURI = "Google US English";
+    utterance.lang = "en-US";
+     
+    window.speechSynthesis.speak(utterance);   
+
+    /** 
+     * Google US English _ en-US
+        Google UK English Female _ en-GB
+        Google UK English Male _ en-GB 
+    */ 
+}
 
  /**
   * LISTA CONTENIDO DE FRASES
@@ -220,3 +237,7 @@ btn_next.addEventListener("click",()=>{
 
 });
 
+wordEnglish.addEventListener("click",()=>{
+    textToSpeakword();
+    console.log("soy español") 
+});
