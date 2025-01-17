@@ -1,7 +1,7 @@
 let listWord=[
-    ["1","	Aqua/Cyan","	Aqua/Cian","	The sky is a clear aqua","	El cielo es de un azul claro","	Aqua es una forma más poética de decir "azul claro""],
+    ["1","	Aqua/Cyan","	Aqua/Cian","	The sky is a clear aqua","	El cielo es de un azul claro","	Aqua es una forma más poética de decir 'azul claro'"],
     ["2","	Aquamarine","	Aquamarine","	The ocean is a beautiful aquamarine","	El océano es de un hermoso color aguamarina","	Aquamarine es un tono de azul verdoso, similar al color del mar"],
-    ["3","	Azure","	Azure","	The azure sky is so clear","	El cielo azur es tan claro","	Azure es otro sinónimo de "azul cielo", pero con una connotación más poética"],
+    ["3","	Azure","	Azure","	The azure sky is so clear","	El cielo azur es tan claro","	Azure es otro sinónimo de 'azul cielo', pero con una connotación más poética"],
     ["4","	Beige","	Beige","	The sand is soft and beige","	La arena es suave y beige","	Beige es un color entre el crema y el marrón claro"],
     ["5","	Black","	Negro","	The night sky is dark black","	El cielo nocturno es negro oscuro","	Una forma sencilla de describir el color del cielo en la noche"],
     ["6","	Blue","	Azul","	The ocean is deep blue","	El océano es azul profundo","	Deep blue enfatiza la intensidad del color azul del océano"],
@@ -9,7 +9,7 @@ let listWord=[
     ["8","	Chocolate","	Chocolate","	The cake is dark chocolate","	El pastel es de chocolate oscuro","	Un sabor y color común para los pasteles"],
     ["9","	Coral","	Coral","	The coral reef is colorful","	El arrecife de coral es colorido","	Los arrecifes de coral son conocidos por su gran variedad de colores"],
     ["10","	Crimson","	Carmesí","	The rose is a deep crimson","	La rosa es de un rojo carmesí intenso","	Crimson es un tono de rojo muy intenso y oscuro"],
-    ["11","	Dark"," Gray","	Gris oscuro	The clouds are dark gray","	Las nubes son de un gris oscuro","	Un color común para las nubes antes de una tormenta"],
+    ["11","	Dark Gray","Gris oscuro","The clouds are dark gray","	Las nubes son de un gris oscuro","	Un color común para las nubes antes de una tormenta"],
     ["12","	Gold","	Dorado","	The sun is shining gold","	El sol brilla dorado","	Una descripción poética del color del sol"],
     ["13","	Gray","	Gris","	The rock is gray and old","	La roca es gris y vieja","	Un color común para las rocas y las piedras"],
     ["14","	Green","	Verde","	The grass is so green","	La hierba está muy verde","	Un color asociado con la naturaleza y la vida"],
@@ -34,6 +34,6 @@ let listWord=[
     ["33","	Teal","	Azul verdoso","	The duck is a bright teal","	El pato es de un color azul verdoso brillante","	Teal es un tono de azul verdoso, similar al color del agua"],
     ["34","	Turquoise","	Turquesa","	The water is a bright turquoise","	El agua es de un color turquesa brillante","	Turquoise es un tono de azul verdoso, asociado con el agua"],
     ["35","	White","	Blanco","	The snow is pure white","	La nieve es blanca pura","	Un color asociado con la pureza y el invierno"],
-    ["36","	White"," Smoke","	Blanco	The smoke is white and wispy","	El humo es blanco y tenue","	Una descripción del humo blanco"],
+    ["36","	White Smoke","	Blanco","The smoke is white and wispy","	El humo es blanco y tenue","	Una descripción del humo blanco"],
     ["37","	Yellow","	Amarillo","	The lemon is bright yellow","	El limón es de un amarillo brillante","	Un color asociado con la fruta y el sol"]    
 ]

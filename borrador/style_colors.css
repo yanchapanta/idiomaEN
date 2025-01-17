@@ -52,7 +52,6 @@ body{
   }
 /*Modificando botones centrales*/
 .btn_container{
-    position: relative;
     width: 62%;
     
     margin: auto;
@@ -81,7 +80,7 @@ body{
     
     
 }
-.btn_repeat{
+#btn_play{
     background-color: transparent;
     background-image:url("/src/img/btn_repeat.svg");
     background-repeat: no-repeat;
@@ -89,21 +88,21 @@ body{
 
     
 }
-.btn_showMe{
+#btn_showMe{
     background-color: transparent;
     background-image:url("/src/img/btn_show.svg");
     background-repeat: no-repeat;
      cursor:pointer;  
     
 }
-.btn_next{
+#btn_next{
     background-color: transparent;
     background-image:url("/src/img/btn_nextTo.svg");
     background-repeat: no-repeat;
      cursor:pointer;  
     
 }
-.btn_spanish{
+#btn_spanish{
     background-color: transparent;
     background-image:url("/src/img/btn_es.svg");
     background-repeat: no-repeat;
@@ -111,11 +110,8 @@ body{
     
 }
 .btn_controls{
-    width: 50px;
-    height: 50px;
-}
-.btn_controls img{
-    width: 100%;
+    width: 88px;
+    height: 88px;
 }
 .btn_controls object{
     z-index: -1;
@@ -169,7 +165,7 @@ body{
     /**
     */
 }
-.num_random{
+#numberA{
     height: 150px;
     width: 150px;
     position: absolute;
@@ -181,7 +177,7 @@ body{
    font-size: 7rem;
    color: wheat;
    border-radius: 50%;   
-   border: 7px solid red;
+   border: 1px solid red;
    text-align: center;
    text-decoration: none;
    display: flex;
@@ -189,14 +185,11 @@ body{
    justify-content: center;  
    
 }
-.num_random:hover{
-    border: 6px double red;
+#numberA:hover{
+    border: 1px double red;
     color: wheat;
     background-color: rgba(128, 255, 0, 0.267);
 
-}
-.auto_color{
-    
 }
 
 @keyframes example {
@@ -207,7 +200,7 @@ body{
   100% {transform: rotate(180deg);}
   }
   /*Palabra español he inglés*/
-  .wordSpanish,.wordEnglish{
+  #wordSpanish,#wordEnglish{
    
     position: absolute;
     display: block;
@@ -218,7 +211,7 @@ body{
     padding: 1rem;
     cursor: pointer;
 }
-.wordEnglish:hover{
+#wordEnglish:hover{
     color: red;
   }
 
@@ -234,7 +227,7 @@ body{
   td, th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 3px 5px 5px 3px;
+    padding: 8px;
   }
   
   tr:nth-child(even) {
