@@ -1,0 +1,20 @@
+let listWord=[
+    ["1	","Everything	    ","Todo","	Everything builds up and spills away","	Todo se acumula y se derrama","	 'Everything ' emphasizes the cumulative nature of emotions and experiences"],
+    ["2	","Painful	    ","Doloroso","	And it's so painful to see","	Y es tan doloroso de ver","	 'Painful ' highlights the intense emotional suffering caused by the situation"],
+    ["3	","Yourself	    ","Tú mismo","	If you can live all by yourself, alone","	Si puedes vivir solo, solo tú","	 'Yourself ' emphasizes the individual's capacity for self-sufficiency, contrasting with the speaker's dependence"],
+    ["4	","Lingering	    ","Persistente","	Your scent lingers around me","	Tu aroma persiste a mi alrededor","	 'Lingering ' describes the lingering presence of the past, even though the relationship is over"],
+    ["5	","Ringing	    ","Resonante","	Your voice keeps ringing through me, today","	Tu voz sigue resonando en mí, hoy","	 'Ringing ' conveys the persistent and intrusive nature of the memories associated with the ex-partner's voice"],
+    ["6	","Ended	        ","Terminado","	And I know that our tale has ended","	Y sé que nuestro cuento ha terminado","	 'Ended ' marks the finality of the relationship, emphasizing the irreversible nature of the breakup"],
+    ["7	","Wishing	    ","Deseando","	And I will keep on wishing","	Y seguiré deseando","	 'Wishing ' expresses the speaker's persistent hope for reconciliation or the ex-partner's happiness"],
+    ["8	","Heavier	    ","Más pesado","	And each step, feels heavier with each new breath","	Y cada paso, se siente más pesado con cada nueva respiración","	 'Heavier ' symbolizes the emotional burden and difficulty of moving on from the relationship"],
+    ["9	","Someday	    ","Algún día","	And if someday I was born again","	Y si algún día volviera a nacer","	 'Someday ' conveys the speaker"],
+    ["10	","Sunshine	    ","Sol","	And in the summer sunshine","	Y en el sol de verano","	 'Sunshine ' represents happiness and warmth, contrasting with the current state of sadness and loneliness"],
+    ["11	","Snowflakes	    ","Copos de nieve","	Or in the winter's falling snowflakes","	O en los copos de nieve que caen en invierno","	 'Snowflakes ' symbolize the fleeting and ephemeral nature of time and memories"],
+    ["12	","Rolling	    ","Rodando","	As the days keep on rolling over","	Mientras los días siguen rodando","	 'Rolling ' describes the continuous passage of time, highlighting the speaker's ongoing struggle with the past"],
+    ["13	","Lonely	        ","Solitario","	Yet still, I'm feeling lonely without you","	Sin embargo, todavía me siento solo sin ti","	 'Lonely ' emphasizes the profound sense of isolation and emptiness experienced without the ex-partner"],
+    ["14	","Overflows	    ","Desborda","	Cause my love still overflows, and now I know","	Porque mi amor todavía desborda, y ahora sé","	 'Overflows ' conveys the intensity and abundance of the speaker's love, even though it is unrequited"],
+    ["15	","Silence	    ","Silencio","	You left this canary in silence to stand","	Dejaste a este canario en silencio para que se parara","	 'Silence ' represents the loneliness and isolation the speaker feels after being abandoned by the ex-partner"],
+    ["16	","Rot	        ","Pudrirse","	Alone, in it's dark cage, to rot away","	Solo, en su oscura jaula, para pudrirse","	 'Rot ' symbolizes the speaker's fear of withering away emotionally due to the pain and loneliness"],
+    ["17	","Praying	    ","Rezando","	And I will keep on praying","	Y seguiré deseando","	 'Praying ' emphasizes the speaker's fervent hope and desire for a positive outcome"],
+    ["18	","Happy	        ","Feliz","	I hope that you'll be happy","	Espero que seas feliz","	 'Happy ' expresses the speaker's genuine wish for the ex-partner's well-being, despite the pain caused by the breakup"]
+]

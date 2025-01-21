@@ -1,5 +1,5 @@
 let listWord=[
-    ["1","	Aqua/Cyan","	Aqua/Cian","	The sky is a clear aqua","	El cielo es de un azul claro","	Aqua es una forma más poética de decir 'azul claro'"],
+    ["1","	Aqua","	Aqua","	The ocean glimmers aqua	","   El océano brilla en color aqua	","Aqua describe un tono vibrante de azul verdoso"],
     ["2","	Aquamarine","	Aquamarine","	The ocean is a beautiful aquamarine","	El océano es de un hermoso color aguamarina","	Aquamarine es un tono de azul verdoso, similar al color del mar"],
     ["3","	Azure","	Azure","	The azure sky is so clear","	El cielo azur es tan claro","	Azure es otro sinónimo de 'azul cielo', pero con una connotación más poética"],
     ["4","	Beige","	Beige","	The sand is soft and beige","	La arena es suave y beige","	Beige es un color entre el crema y el marrón claro"],
@@ -9,17 +9,17 @@ let listWord=[
     ["8","	Chocolate","	Chocolate","	The cake is dark chocolate","	El pastel es de chocolate oscuro","	Un sabor y color común para los pasteles"],
     ["9","	Coral","	Coral","	The coral reef is colorful","	El arrecife de coral es colorido","	Los arrecifes de coral son conocidos por su gran variedad de colores"],
     ["10","	Crimson","	Carmesí","	The rose is a deep crimson","	La rosa es de un rojo carmesí intenso","	Crimson es un tono de rojo muy intenso y oscuro"],
-    ["11","	Dark Gray","Gris oscuro","The clouds are dark gray","	Las nubes son de un gris oscuro","	Un color común para las nubes antes de una tormenta"],
+    ["11","	DarkGray","Gris oscuro","The clouds are dark gray","	Las nubes son de un gris oscuro","	Un color común para las nubes antes de una tormenta"],
     ["12","	Gold","	Dorado","	The sun is shining gold","	El sol brilla dorado","	Una descripción poética del color del sol"],
     ["13","	Gray","	Gris","	The rock is gray and old","	La roca es gris y vieja","	Un color común para las rocas y las piedras"],
     ["14","	Green","	Verde","	The grass is so green","	La hierba está muy verde","	Un color asociado con la naturaleza y la vida"],
     ["15","	Indigo","	Índigo","	The flower is a bright indigo","	La flor es de un color índigo brillante","	Indigo es un tono de azul oscuro, casi morado"],
     ["16","	Ivory","	Marfil","	The dress is a soft ivory","	El vestido es de un suave color marfil","	Ivory es un color blanco cremoso, a menudo asociado con la elegancia"],
     ["17","	Lavender","	Lavanda","	The field of lavender is purple","	El campo de lavanda es morado","	Lavender es un tono de morado pálido y suave"],
-    ["18","	Light Gray","	Gris claro","	The clouds are light gray","	Las nubes son de un gris claro","	Un color común para las nubes en un día nublado"],
+    ["18","	LightGray","	Gris claro","	The clouds are light gray","	Las nubes son de un gris claro","	Un color común para las nubes en un día nublado"],
     ["19","	Magenta","	Magenta","	The flower is a bright magenta","	La flor es de un color magenta brillante","	Magenta es un tono de rosa muy intenso y vibrante"],
     ["20","	Maroon","	Marrón oscuro","	The carpet is a deep maroon","	La alfombra es de un color burdeos intenso","	Maroon es un tono de rojo oscuro, casi marrón"],
-    ["21","	Misty Rose","	Rosa pálido","	The sky is a misty rose","	El cielo es de un rosa pálido","	Misty rose es un tono de rosa muy suave y delicado"],
+    ["21","	MistyRose","	Rosa pálido","	The sky is a misty rose","	El cielo es de un rosa pálido","	Misty rose es un tono de rosa muy suave y delicado"],
     ["22","	Navy","	Azul marino","	The sailor's uniform is navy blue","	El uniforme de marinero es azul marino","	Navy blue es un tono de azul oscuro, asociado con la marina"],
     ["23","	Olive","	Oliva","	The olive oil is green","	El aceite de oliva es verde","	El aceite de oliva virgen extra tiene un color verde"],
     ["24","	Orange","	Naranja","	The orange is so juicy","	La naranja está muy jugosa","	Un color y sabor asociados con la fruta"],
@@ -34,6 +34,7 @@ let listWord=[
     ["33","	Teal","	Azul verdoso","	The duck is a bright teal","	El pato es de un color azul verdoso brillante","	Teal es un tono de azul verdoso, similar al color del agua"],
     ["34","	Turquoise","	Turquesa","	The water is a bright turquoise","	El agua es de un color turquesa brillante","	Turquoise es un tono de azul verdoso, asociado con el agua"],
     ["35","	White","	Blanco","	The snow is pure white","	La nieve es blanca pura","	Un color asociado con la pureza y el invierno"],
-    ["36","	White Smoke","	Blanco","The smoke is white and wispy","	El humo es blanco y tenue","	Una descripción del humo blanco"],
-    ["37","	Yellow","	Amarillo","	The lemon is bright yellow","	El limón es de un amarillo brillante","	Un color asociado con la fruta y el sol"]    
+    ["36","	WhiteSmoke","	Blanco","The smoke is white and wispy","	El humo es blanco y tenue","	Una descripción del humo blanco"],
+    ["37","	Yellow","	Amarillo","	The lemon is bright yellow","	El limón es de un amarillo brillante","	Un color asociado con la fruta y el sol"],
+    ["38","	Cyan","	Cian","	The logo uses cyan accents	","   El logo usa acentos en cian	","Cyan es un color primario en impresión"]    
 ]

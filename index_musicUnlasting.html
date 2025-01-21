@@ -4,26 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numbers English Ordinal</title>
+    <title>LiSA - unlasting lyrics </title>
     <link rel="stylesheet" href="css/style_colors.css">
     <link rel="icon" href="src/img/logo_book.svg" type="image/x-icon">
 </head>
 
 <body>
-   <!--
+  
+    <!--
     NÚMERO EN INGLÉS teamA
     -->
     <div class="header">
-        <div class="btn_navigation"  >
+        <div class="btn_navigation">
             <a href="index.html">
                 <img src="src/img/btn_index_back.svg" alt="">
             </a>
         </div>
         <h1 class="title">
-            <span id="totalList"></span> word
-            Numbers Ordinal English
+            <span id="totalList"></span>
+            LiSA - unlasting lyrics
         </h1>
-        <div class="btn_navigation" >
+        <div class="btn_navigation">
             <a href="index.html">
                 <img src="src/img/btn_index_next.svg" alt="">
             </a>
@@ -35,14 +36,12 @@
         <input disabled id="teamA_inputEN_phrase" class="showNo" type="text">
         <span id="teamA_wordEnglish" class="wordEnglish showNo">word English</span>
     </div>
-   
-
     <div class="wrap_btn">
         <div class="fromTo">
             <div class="fromTo_input_container">
                 <input id="teamA_numStart" type="text" value="1">
                 <p>hasta</p>
-                <input id="teamA_numEnd" type="text" value="30">
+                <input id="teamA_numEnd" type="text" value="10">
 
             </div>
             <button onclick="fromToArea()">Enviar</button>
@@ -50,6 +49,7 @@
         <div class="btn_container">
             <div>
                 <input id="teamA_btn_repeat" class="btn_repeat" type="button">
+                <input id="teamA_btn_repeat_word" class="btn_repeat_word" type="text" value="word">
             </div>
             <div class="btn_container_central">
                 <input id="teamA_btn_showMe" class="btn_showMe" type="button">
@@ -57,14 +57,14 @@
             </div>
             <div>
                 <input id="teamA_btn_next" class="btn_next" type="button">
-    
+
             </div>
             <div class="img_animation"></div>
-            
+
             <a id="teamA_num_random" class="num_random" href="#teamA_tablas">1</a>
         </div>
     </div>
-   
+
     <div class="campo">
         <input id="teamA_inputES_phrase" type="text" placeholder="Here Spanish">
         <span id="teamA_wordSpanish" class="wordSpanish">es</span>
@@ -78,71 +78,29 @@
     <table id="teamA_tablas">
         <tr>
             <th>N</th>
-            <th>Físico</th>
-            <th>Color English </th>
-            <th>Color Spanish </th>
-            <th>Frase en Inglés </th>
-            <th>Traducción al Español </th>
+            <th>Palabra Inglés </th>
+            <th>Palabra Español </th>
+            <th>Frase Inglés </th>
+            <th>Frase Español </th>
             <th>Explicación</th>
         </tr>
     </table>
+
+
+
+    <script src="/js/main_musicUnlating.js" defer></script>
+    <br>
+    <br>
+    <br>
     <!--
-    NÚMERO EN INGLÉS TOTALES
+    
     -->
-    <h1 class="title">Numbers English </h1>
-
-    <div class="campo">
-        <input disabled id="ABCD_inputEN_phrase" class="showNo" type="text">
-        <span id="ABCD_wordEnglish" class="wordEnglish showNo">word English</span>
+    <div align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dHnsoGTfS2Q?si=u2RM4vBuDpTPKx76"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <a class="btn_controls left" href="index.html" width="30">
-        <img src="src/img/btn_index_back.svg" alt="" width="30">
-    </a>
-
-    <div class="btn_container">
-        <div>
-            <input id="ABCD_btn_repeat" class="btn_repeat" type="button">
-        </div>
-        <div class="btn_container_central">
-            <input id="ABCD_btn_showMe" class="btn_showMe" type="button">
-            <input id="ABCD_btn_spanish" class="btn_spanish" type="button">
-        </div>
-        <div>
-            <input id="ABCD_btn_next" class="btn_next" type="button">
-
-        </div>
-        <div class="img_animation"></div>
-        
-        <a id="ABCD_num_random" class="num_random" href="#ABCD_tablas">1</a>
-    </div>
-    <a class="btn_controls right" href="index.html">
-        <img src="src/img/btn_index_next.svg" alt="">
-    </a>
-    <div class="campo">
-        <input id="ABCD_inputES_phrase" type="text" placeholder="Here Spanish">
-        <span id="ABCD_wordSpanish" class="wordSpanish">es</span>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h3>Contenido de frases TOTALES </h3>
-
-    <table id="ABCD_tablas">
-        <tr>
-            <th>N</th>
-            <th>Físico</th>
-            <th>Color English </th>
-            <th>Color Spanish </th>
-            <th>Frase en Inglés </th>
-            <th>Traducción al Español </th>
-            <th>Explicación</th>
-        </tr>
-    </table>
-    
-    
-
-    <script src="/js/main_numbersOrdinal.js" defer></script>
 </body>
 
 </html>

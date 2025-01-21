@@ -2,44 +2,24 @@
 
 //LISTA
 let listWord=[
-    ["1","	Aqua","	Aqua","	The ocean glimmers aqua	","   El océano brilla en color aqua	","Aqua describe un tono vibrante de azul verdoso"],
-    ["2","	Aquamarine","	Aquamarine","	The ocean is a beautiful aquamarine","	El océano es de un hermoso color aguamarina","	Aquamarine es un tono de azul verdoso, similar al color del mar"],
-    ["3","	Azure","	Azure","	The azure sky is so clear","	El cielo azur es tan claro","	Azure es otro sinónimo de 'azul cielo', pero con una connotación más poética"],
-    ["4","	Beige","	Beige","	The sand is soft and beige","	La arena es suave y beige","	Beige es un color entre el crema y el marrón claro"],
-    ["5","	Black","	Negro","	The night sky is dark black","	El cielo nocturno es negro oscuro","	Una forma sencilla de describir el color del cielo en la noche"],
-    ["6","	Blue","	Azul","	The ocean is deep blue","	El océano es azul profundo","	Deep blue enfatiza la intensidad del color azul del océano"],
-    ["7","	Brown","	Marrón","	The tree trunk is brown","	El tronco del árbol es marrón","	Un color común para los troncos de los árboles"],
-    ["8","	Chocolate","	Chocolate","	The cake is dark chocolate","	El pastel es de chocolate oscuro","	Un sabor y color común para los pasteles"],
-    ["9","	Coral","	Coral","	The coral reef is colorful","	El arrecife de coral es colorido","	Los arrecifes de coral son conocidos por su gran variedad de colores"],
-    ["10","	Crimson","	Carmesí","	The rose is a deep crimson","	La rosa es de un rojo carmesí intenso","	Crimson es un tono de rojo muy intenso y oscuro"],
-    ["11","	DarkGray","Gris oscuro","The clouds are dark gray","	Las nubes son de un gris oscuro","	Un color común para las nubes antes de una tormenta"],
-    ["12","	Gold","	Dorado","	The sun is shining gold","	El sol brilla dorado","	Una descripción poética del color del sol"],
-    ["13","	Gray","	Gris","	The rock is gray and old","	La roca es gris y vieja","	Un color común para las rocas y las piedras"],
-    ["14","	Green","	Verde","	The grass is so green","	La hierba está muy verde","	Un color asociado con la naturaleza y la vida"],
-    ["15","	Indigo","	Índigo","	The flower is a bright indigo","	La flor es de un color índigo brillante","	Indigo es un tono de azul oscuro, casi morado"],
-    ["16","	Ivory","	Marfil","	The dress is a soft ivory","	El vestido es de un suave color marfil","	Ivory es un color blanco cremoso, a menudo asociado con la elegancia"],
-    ["17","	Lavender","	Lavanda","	The field of lavender is purple","	El campo de lavanda es morado","	Lavender es un tono de morado pálido y suave"],
-    ["18","	LightGray","	Gris claro","	The clouds are light gray","	Las nubes son de un gris claro","	Un color común para las nubes en un día nublado"],
-    ["19","	Magenta","	Magenta","	The flower is a bright magenta","	La flor es de un color magenta brillante","	Magenta es un tono de rosa muy intenso y vibrante"],
-    ["20","	Maroon","	Marrón oscuro","	The carpet is a deep maroon","	La alfombra es de un color burdeos intenso","	Maroon es un tono de rojo oscuro, casi marrón"],
-    ["21","	MistyRose","	Rosa pálido","	The sky is a misty rose","	El cielo es de un rosa pálido","	Misty rose es un tono de rosa muy suave y delicado"],
-    ["22","	Navy","	Azul marino","	The sailor's uniform is navy blue","	El uniforme de marinero es azul marino","	Navy blue es un tono de azul oscuro, asociado con la marina"],
-    ["23","	Olive","	Oliva","	The olive oil is green","	El aceite de oliva es verde","	El aceite de oliva virgen extra tiene un color verde"],
-    ["24","	Orange","	Naranja","	The orange is so juicy","	La naranja está muy jugosa","	Un color y sabor asociados con la fruta"],
-    ["25","	Pink","	Rosa","	The cotton candy is pink","	El algodón de azúcar es rosa","	Un color asociado con la dulzura y la infancia"],
-    ["26","	Plum","	Ciruela","	The plum is dark purple","	La ciruela es de color morado oscuro","	Un color asociado con la fruta"],
-    ["27","	Purple","	Morado","	The grape is dark purple","	La uva es de color morado oscuro","	Un color común para las uvas"],
-    ["28","	Red","	Rojo","	The apple is bright red","	La manzana es de un rojo brillante","	Un color asociado con la fruta y la energía"],
-    ["29","	Salmon","	Salmón","	The fish is pink salmon","	El pescado es salmón rosado","	Un tipo de pescado conocido por su color rosado"],
-    ["30","	Silver","	Plata","	The moon is shining silver","	La luna brilla plateada","	Una descripción poética del color de la luna"],
-    ["31","	Sky","	Cielo","	The sky is a clear blue","	El cielo es de un azul claro","	Una forma sencilla de describir el color del cielo"],
-    ["32","	Tan","	Caoba","	The leather is a light brown","	El cuero es de un marrón claro","	Un color común para el cuero"],
-    ["33","	Teal","	Azul verdoso","	The duck is a bright teal","	El pato es de un color azul verdoso brillante","	Teal es un tono de azul verdoso, similar al color del agua"],
-    ["34","	Turquoise","	Turquesa","	The water is a bright turquoise","	El agua es de un color turquesa brillante","	Turquoise es un tono de azul verdoso, asociado con el agua"],
-    ["35","	White","	Blanco","	The snow is pure white","	La nieve es blanca pura","	Un color asociado con la pureza y el invierno"],
-    ["36","	WhiteSmoke","	Blanco","The smoke is white and wispy","	El humo es blanco y tenue","	Una descripción del humo blanco"],
-    ["37","	Yellow","	Amarillo","	The lemon is bright yellow","	El limón es de un amarillo brillante","	Un color asociado con la fruta y el sol"],
-    ["38","	Cyan","	Cian","	The logo uses cyan accents	","   El logo usa acentos en cian	","Cyan es un color primario en impresión"]    
+    ["1	","Everything	    ","Todo","	Everything builds up and spills away","	Todo se acumula y se derrama","	 'Everything ' emphasizes the cumulative nature of emotions and experiences"],
+    ["2	","Painful	    ","Doloroso","	And it's so painful to see","	Y es tan doloroso de ver","	 'Painful ' highlights the intense emotional suffering caused by the situation"],
+    ["3	","Yourself	    ","Tú mismo","	If you can live all by yourself, alone","	Si puedes vivir solo, solo tú","	 'Yourself ' emphasizes the individual's capacity for self-sufficiency, contrasting with the speaker's dependence"],
+    ["4	","Lingering	    ","Persistente","	Your scent lingers around me","	Tu aroma persiste a mi alrededor","	 'Lingering ' describes the lingering presence of the past, even though the relationship is over"],
+    ["5	","Ringing	    ","Resonante","	Your voice keeps ringing through me, today","	Tu voz sigue resonando en mí, hoy","	 'Ringing ' conveys the persistent and intrusive nature of the memories associated with the ex-partner's voice"],
+    ["6	","Ended	        ","Terminado","	And I know that our tale has ended","	Y sé que nuestro cuento ha terminado","	 'Ended ' marks the finality of the relationship, emphasizing the irreversible nature of the breakup"],
+    ["7	","Wishing	    ","Deseando","	And I will keep on wishing","	Y seguiré deseando","	 'Wishing ' expresses the speaker's persistent hope for reconciliation or the ex-partner's happiness"],
+    ["8	","Heavier	    ","Más pesado","	And each step, feels heavier with each new breath","	Y cada paso, se siente más pesado con cada nueva respiración","	 'Heavier ' symbolizes the emotional burden and difficulty of moving on from the relationship"],
+    ["9	","Someday	    ","Algún día","	And if someday I was born again","	Y si algún día volviera a nacer","	 'Someday ' conveys the speaker"],
+    ["10	","Sunshine	    ","Sol","	And in the summer sunshine","	Y en el sol de verano","	 'Sunshine ' represents happiness and warmth, contrasting with the current state of sadness and loneliness"],
+    ["11	","Snowflakes	    ","Copos de nieve","	Or in the winter's falling snowflakes","	O en los copos de nieve que caen en invierno","	 'Snowflakes ' symbolize the fleeting and ephemeral nature of time and memories"],
+    ["12	","Rolling	    ","Rodando","	As the days keep on rolling over","	Mientras los días siguen rodando","	 'Rolling ' describes the continuous passage of time, highlighting the speaker's ongoing struggle with the past"],
+    ["13	","Lonely	        ","Solitario","	Yet still, I'm feeling lonely without you","	Sin embargo, todavía me siento solo sin ti","	 'Lonely ' emphasizes the profound sense of isolation and emptiness experienced without the ex-partner"],
+    ["14	","Overflows	    ","Desborda","	Cause my love still overflows, and now I know","	Porque mi amor todavía desborda, y ahora sé","	 'Overflows ' conveys the intensity and abundance of the speaker's love, even though it is unrequited"],
+    ["15	","Silence	    ","Silencio","	You left this canary in silence to stand","	Dejaste a este canario en silencio para que se parara","	 'Silence ' represents the loneliness and isolation the speaker feels after being abandoned by the ex-partner"],
+    ["16	","Rot	        ","Pudrirse","	Alone, in it's dark cage, to rot away","	Solo, en su oscura jaula, para pudrirse","	 'Rot ' symbolizes the speaker's fear of withering away emotionally due to the pain and loneliness"],
+    ["17	","Praying	    ","Rezando","	And I will keep on praying","	Y seguiré deseando","	 'Praying ' emphasizes the speaker's fervent hope and desire for a positive outcome"],
+    ["18	","Happy	        ","Feliz","	I hope that you'll be happy","	Espero que seas feliz","	 'Happy ' expresses the speaker's genuine wish for the ex-partner's well-being, despite the pain caused by the breakup"]
 ]
 
 const teamA_numStart=document.getElementById("teamA_numStart"),
@@ -111,6 +91,11 @@ teamA_wordEnglish.textContent=teamA_colWordEN;
 document.getElementById('teamA_btn_repeat').addEventListener("click",()=>{
     teamA_phraseToSpeak();  
 });
+document.getElementById('teamA_btn_repeat_word').addEventListener("click",()=>{
+    teamA_wordToSpeak();
+    console.log()
+});
+
 //BOTON MUESTRAME
 
 document.getElementById('teamA_btn_showMe').addEventListener("click",()=>{
@@ -123,8 +108,8 @@ document.getElementById('teamA_btn_showMe').addEventListener("click",()=>{
         
         
         if(i === teamA_rowRamdon){
-           // teamA_fila.style.backgroundColor="red";
-            teamA_num_random.style.backgroundColor=listWord[i][1].trim();
+            teamA_fila.style.backgroundColor="red";
+            //teamA_num_random.style.backgroundColor=listWord[i][1].trim();
            
         }
         for (let j = 0; j < listWord[0].length; j++) {

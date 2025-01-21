@@ -49,11 +49,12 @@ let listWord=[
 ]
 
 const teamA_numStart=document.getElementById("teamA_numStart"),
-      teamA_numEnd=document.getElementById("teamA_numEnd");
-      console.log()
-let numStart=teamA_numStart.textContent-1,
-    numEnd=teamA_numEnd.textContent-1;//listWord.length/2 →22 
-    console.log(numStart)
+      teamA_numEnd=document.getElementById("teamA_numEnd"),
+      totalList=document.getElementById("totalList");
+      totalList.textContent=listWord.length;
+      
+let numStart=teamA_numStart.value-1,
+numEnd=teamA_numEnd.value-1;//listWord.length/2 →22 
 
 let ABCD_rowRamdon=ABCD_numAleatorio(),
     ABCD_colNum=listWord[ABCD_rowRamdon][0],  
@@ -81,8 +82,23 @@ document.addEventListener("DOMContentLoaded",(e)=>{
     teamA_num_random.textContent= teamA_colNum;
     teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
 
-});  
+    const teamA_numStart=document.getElementById("teamA_numStart"),
+      teamA_numEnd=document.getElementById("teamA_numEnd");
 
+
+    teamA_numStart.value=1;
+    teamA_numEnd.value=listWord.length;
+
+
+});  
+// ingresar área de estudio
+function fromToArea() {
+    const teamA_numStart=document.getElementById("teamA_numStart").value-1,
+      teamA_numEnd=document.getElementById("teamA_numEnd").value-1;
+    numStart=teamA_numStart;
+      numEnd=teamA_numEnd;
+    //numStart=teamA_numStart
+}
 function ABCD_numAleatorio(){
     //del 1 al 44
     let numberSelected = 0;
@@ -311,7 +327,7 @@ teamA_num_random.addEventListener("click",()=>{
     
     teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
     //  teamA_fila.style.backgroundColor="red";
-    for (let i = 0; i < listWord.length/2; i++) {
+    for (let i = 0; i < listWord.length; i++) {
         
         
         if(i === teamA_rowRamdon){
