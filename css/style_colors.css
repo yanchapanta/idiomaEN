@@ -183,7 +183,7 @@ body{
    
     
     background-repeat: no-repeat;
-    background-image: url(/src/img/image_cerebro.png);
+    background-image: url("/src/img/image_cerebro.png");
     background-position: center;
     background-size: auto;
     background-origin: content-box;
