@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto, phrases </title>
+    <link rel="stylesheet" href="css/style_colors.css">
+    <link rel="icon" href="src/img/logo_book.svg" type="image/x-icon">
+</head>
+
+<body>
+  
+    <!--
+    NÚMERO EN INGLÉS teamA
+    -->
+    <div class="header">
+        <div class="btn_navigation">
+            <a href="index.html">
+                <img src="https://yanchapanta.github.io/idiomaEN/src/img/btn_index_back.svg" alt="">
+            </a>
+        </div>
+        <h1 class="title">
+            <span id="totalList"></span>
+            Reto, phrases
+        </h1>
+        <div class="btn_navigation">
+            <a href="index.html">
+                <img src="https://yanchapanta.github.io/idiomaEN/src/img/btn_index_next.svg" alt="">
+            </a>
+        </div>
+
+    </div>
+
+    <div class="campo">
+        <input disabled id="teamA_inputEN_phrase" class="showNo" type="text">
+        <span id="teamA_wordEnglish" class="wordEnglish showNo">word English</span>
+    </div>
+    <div class="wrap_btn">
+        <div class="fromTo">
+            <div class="fromTo_input_container">
+                <input id="teamA_numStart" type="text" value="1">
+                <p>hasta</p>
+                <input id="teamA_numEnd" type="text" value="10">
+
+            </div>
+            <button onclick="fromToArea()">Enviar</button>
+        </div>
+        <div class="btn_container">
+            <div>
+                <input id="teamA_btn_repeat" class="btn_repeat" type="button">
+                <input id="teamA_btn_repeat_word" class="btn_repeat_word" type="text" value="word">
+            </div>
+            <div class="btn_container_central">
+                <input id="teamA_btn_showMe" class="btn_showMe" type="button">
+                <input id="teamA_btn_spanish" class="btn_spanish" type="button">
+            </div>
+            <div>
+                <input id="teamA_btn_next" class="btn_next" type="button">
+
+            </div>
+            <div class="img_animation"></div>
+
+            <a id="teamA_num_random" class="num_random" href="#teamA_tablas">1</a>
+        </div>
+    </div>
+
+    <div class="campo">
+        <input id="teamA_inputES_phrase" type="text" placeholder="Here Spanish">
+        <span id="teamA_wordSpanish" class="wordSpanish">es</span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Contenido</h3>
+
+    <table id="teamA_tablas">
+        <tr>
+            <th>N</th>
+            <th>Palabra Inglés </th>
+            <th>Palabra Español </th>
+            <th>Frase Inglés </th>
+            <th>Frase Español </th>
+            <th>Explicación</th>
+        </tr>
+    </table>
+
+
+
+    <script src="js/main_99word.js" defer></script>
+    <br>
+    <br>
+    <br>
+    <!--
+    
+    -->
+    <div align="center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dHnsoGTfS2Q?si=u2RM4vBuDpTPKx76"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</body>
+
+</html>
