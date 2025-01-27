@@ -15,25 +15,22 @@ body{
 .campo{
     position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 75px;
     border-radius: 13px;
-
+    border: 1px solid red ;
+    padding: .5em;
+    background-color: whitesmoke;
 }
-.campo, .campo input{
-    background-color: #F5F5F5;
-    margin: auto;
-}
-.campo  input{
-    width: 100%;  
-   
-    font-size: larger;
+.campo p{
+    display: inline-block;
+    color: black;
+    font-size: 2rem;
     text-align: center;
-    pointer-events: none;  
-    border: 0px transparent; 
-    font-size: 2.5em;
-     
 }
+
 /* boton showme*/
 .showNo{
     opacity:0;
@@ -357,11 +354,20 @@ body{
        
     }
     .campo {
+        display: flex;
+        justify-content: center;
                font-size: .7em;
                height: 49px;
+               padding: .5rem;
+               word-wrap: break-word;
+               overflow: break-word;
             }
     .campo, .campo input {
         font-size: 1.2em;
+        word-wrap: break-word;
+        overflow: break-word;
+        height: auto;
+
     }
     .wordSpanish, .wordEnglish {
         font-size: .5em;
@@ -376,5 +382,7 @@ body{
         text-align: left;
         padding: 2px;
     }
-   
+    textarea{
+        width: 80%;
+    }
 }

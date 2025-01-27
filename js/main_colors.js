@@ -104,7 +104,7 @@ let teamA_inputEN_phrase=document.getElementById("teamA_inputEN_phrase"),
     teamA_wordSpanish=document.getElementById("teamA_wordSpanish");
 
  
-teamA_inputEN_phrase.value=teamA_colPhraseEN;
+teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
 teamA_wordEnglish.textContent=teamA_colWordEN; 
 
 // BOTON REPETIR
@@ -136,7 +136,7 @@ document.getElementById('teamA_btn_showMe').addEventListener("click",()=>{
 //BOTON ESPAÑOL
 let teamA_inputES_phrase=document.getElementById("teamA_inputES_phrase");
 document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
-    teamA_inputES_phrase.value=teamA_colPhraseES;
+    teamA_inputES_phrase.textContent=teamA_colPhraseES;
     teamA_wordSpanish.textContent=teamA_colWordES;
    
 });
@@ -255,14 +255,14 @@ teamA_btn_next.addEventListener("click",()=>{
     teamA_phraseToSpeak();
    
   
-    teamA_inputEN_phrase.value=teamA_colPhraseEN;
+    teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
     teamA_wordEnglish.textContent=teamA_colWordEN; 
     teamA_wordSpanish.textContent=teamA_colWordES;
     teamA_num_random.textContent=  teamA_colNum;
     teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
     //teamA_fila.style.backgroundColor="red";
 
-    teamA_inputES_phrase.value=" ";
+    teamA_inputES_phrase.textContent=" ";
     teamA_wordSpanish.textContent=" ";
     teamA_inputEN_phrase.classList.remove("showYes");
     teamA_wordEnglish.classList.remove("showYes");     
