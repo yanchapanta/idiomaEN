@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  
+    
     <!--
     NÚMERO EN INGLÉS teamA
     -->
@@ -47,7 +47,21 @@
                 <input id="teamA_numEnd" type="text" value="10">
 
             </div>
-            <button onclick="fromToArea()">Enviar</button>
+            <button class="fromTo_enviar" onclick="fromToArea()">Enviar</button>
+        </div>
+        <div class="fromTo fromTo-right">
+            <div class="container container_clock">
+                <!--
+                https://www.youtube.com/watch?v=-LbVgpqKuDw
+                -->
+                <div class="clock">
+                    <input class="number" type="text" maxlength="2" value="00"><span>hs</span><input class="number" type="text" maxlength="2" value="00"><span>min</span><input class="number" type="text" maxlength="2" value="00"><span>sec</span>
+                </div>
+                <div class="buttons">
+                    <button id="play" onclick="startTimer()"></button>
+                    <button id="stop" onclick="stopTimer()"></button>
+                </div>
+            </div>
         </div>
         <div class="btn_container">
             <div>
@@ -70,7 +84,7 @@
 
     <div class="campo">
         <p disabled id="teamA_inputES_phrase"  placeholder="Here Spanish">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            
         </p>
         <span id="teamA_wordSpanish" class="wordSpanish">es</span>
     </div>
@@ -90,22 +104,13 @@
             <th>Explicación</th>
         </tr>
     </table>
-
+   
+    <script src="js/timer.js"></script>
 
 
     <script src="js/main_99word.js" defer></script>
-    <br>
-    <br>
-    <br>
-    <!--
     
-    -->
-    <div align="center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dHnsoGTfS2Q?si=u2RM4vBuDpTPKx76"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+   
 </body>
 
 </html>

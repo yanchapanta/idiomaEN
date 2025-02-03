@@ -1,83 +1,19 @@
-La imagen es un ejemplo de como quiero la tabla con la siguiente lista de lista de frases, frase:"
-24	I don't want it	No lo quiero
-25	I don't want that	No quiero eso
-26	I had a wonderful time	Lo pase muy bien
-27	I understand now	Ahora entiendo
-28	l'm not sure	No estoy seguro
-29	Is it could outside?	¿Hace frio afuera?
-30	Is it hot?	¿Hace calor?
-31	Is it raining?	¿Esta lloviendo?
-32	It's over there	Está allí
-33	Just a little!	Solo un poco
-34	Just a moment!	¡Solo un momento!
-35	Let's go and have a look	Vamos aver qué pasa
-36	Tell me	Dime
-37	Thanks for inviting me to your home	Gracias por invitarme a tu casa.
-38	What are you doing?	¿Qué estás haciendo?
-39	What are you thinking about?	¿Qué estás pensando?
-40	What do you think?	¿Qué opinas?
-41	What happens?	¿Qué esta pasando?
-42	What is it?	¿Qué es?
-43	What is that?	¿Qué es eso?
-44	What is this?	¿Qué es esto?
-45	Where are you from?	¿De donde eres?
-46	Do you need anything else?	¿Necesitas algo más?
-47	How much is it?	¿Cuánto cuesta?
-48	I thought the clothes were cheaper	Pensaba que la ropa era más barata.
-49	I'd like to go shopping.	Me gustaría ir de compras.
-50	I'll come back later	Volveré más tarde
-51	I'm sorry We're sold out	Lo siento Pero no nos queda
-52	Is there anything cheaper?	¿Hay algo más barato?
-53	Sorry We don't have any	Lo siento No tenemos ninguno.
-54	The big one or the small one?	¿El grande o el pequeño?
-55	Try it on	Pruebalo
-56	What is that?	¿Qué es eso?
-57	¡What size?	¿Qué talla?
-58	What time does the store open?	¿A qué hora abre la tienda?
-59	Wich one do you want?	¿Cuál quieres?
-60	Wich one is cheaper?	¿Cuál es más barato?
-61	Wich one is the best?	¿Cuál es el mejor?
-62	Anything else?	¿Algo más?
-63	Can I have the bill Please?	¿Me puede dar la cuenta Por favor?
-64	Can you pass me the salt Please?	¿Me puedes pasar la sal Por favor?
-65	Can you recommend a good restaurant around here?	¿Puedes recomendar algún buen restaurante por aquí?
-66	I'll take it	Yo pago
-67	Is everything ok?	¿Está todo bien?
-68	A one way ticket	Un billete de ida
-69	A round trip ticket	Un billete de ida y vuelta.
-70	Do you know where I can get a taxi?	¿Sabes dónde puedo conseguir un taxi?
-71	I'll take you to the bus stop	Te llevaré a la parada del autobúses
-72	Is it far from here?	¿Está lejos de aquí?
-73	Please take me to this address	Por favor llévame a esta dirección.
-74	When does the plane arrive?	¿Cuándo llega el avión?
-75	Can you call back later?	¿Puedes llamar más tarde?
-76	I can't hear you	No te oigo
-77	Let me check	Déjame ver.
-78	May I speak to Mr. Smith Please?	¿Puedo hablar con el Sr. Smith Por favor?
-79	Who's calling?	¿Quién llama?
-80	Would you ask him to call me back Please?	¿Le pedirías que me devuelva la llamada, por favor?
-81	Do you know how to get to the NH Hotel?	¿Sabes cómo llegar al Hotel NH?
-82	For how many nights?	¿Por cúantas noches?
-83	How long before the flight must I check in?	¿Cuánto tiempo antes del vuelo debo hacer el chequeo?
-84	¡How long will you be staying?	¿Cuánto tiempo te vas a quedar?
-85	I'd like a map of the city	Me gustaría un mapa de la ciudad
-86	is there air condition in the room?	¿Hay aire acondicionado en la habitación?
-87	Please Fill out this form	Por favor llene este documento
-88	What time is check out?	¿A qué hora es la salida?
-89	Where can I rent a car?	¿Dónde puedo alquilar un coche?
-90	Forget it	Olvídalo
-91	I'm having a good time	Me la estoy pasando bien.
-92	Hurry up!	Date prisa!
-93	I don't like him	No me cae bien
-94	It's me	Soy yo
-95	Right there	Allí mismo
-96	See you later	Hasta luego
-97	What are you two talking about?	¿De qué están hablando ustedes dos?
-98	What did you do yesterday?	¿Qué hiciste ayer?
-99	Who are you looking for?	¿A quién busca?
-100	Who is it?	¿Quién es?".
-No ingresar frases repetidas.
-Ingresa las frases de español en la columna de español, y las de inglés en la lumna de frase en inglés,
-En la columna de palabras elige la palabras con mas letras de cada frase, he ingresa según pide la columna.
-En la columna de explicación explica por que usa esa palabra en la frase.
-Al final de cada celda poner punto.
+La imagen es un ejemplo de como quiero que completas la tabla con los datos que te proporciono.
+Llena la tabla con los datos faltantes.
+DATOS:
+"
+N°	Palabra Inglés	Palabra Español	Frase Inglés	Frase Español	Explicación
+11	feel		I feel terrible today (something you feel inside).		
+12	sound		You sound tired (this is my opinion - I detect tiredness in your voice).		
+13	didn't sound		She didn’t sound Italian (again, this is my opinion going by her voice).		
+14	look		You look fabulous today (this is my opinion when I look at you).		
+15	doesn't look		He doesn’t look very happy today (again my opinion What my eyes tell me).		
+16	tastes		This milk tastes funny.		
+17	great to see		It was really great to see you again.		
+20	fed up with		He is fed up with cleaning every day.		
+21	tired of working		She is tired of working so many hours.		
+
+".
+Al final de la columna de Plabra Inglés y la columna Palabre Español de cada celda pon un punto, 
+y lo mismo para cada columna. O sino dame todos los datos en un array.
+En la columna de explicación ingres el por que de la frase.

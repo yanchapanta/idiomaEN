@@ -50,6 +50,20 @@
             </div>
             <button onclick="fromToArea()">Enviar</button>
         </div>
+        <div class="fromTo fromTo-right">
+            <div class="container">
+                <!--
+                https://www.youtube.com/watch?v=-LbVgpqKuDw
+                -->
+                <div class="clock">
+                    <input class="number" type="text" maxlength="2" value="00"><span>hs</span><input class="number" type="text" maxlength="2" value="00"><span>min</span><input class="number" type="text" maxlength="2" value="00"><span>sec</span>
+                </div>
+                <div class="buttons">
+                    <button id="play" onclick="startTimer()"></button>
+                    <button id="stop" onclick="stopTimer()"></button>
+                </div>
+            </div>
+        </div>
         <div class="btn_container">
             <div>
                 <input id="teamA_btn_repeat" class="btn_repeat" type="button">
@@ -93,7 +107,7 @@
     </table>
     
     
-
+    <script src="js/timer.js"></script>
     <script src="js/main_numbersCardinal.js" defer></script>
 </body>
 

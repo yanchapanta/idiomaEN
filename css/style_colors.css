@@ -252,9 +252,10 @@ body{
   Tabla de Contenido de prases
   */
   table {
-    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    font-family: arial, sans-serif;
+    
   }
   
   td, th {
@@ -275,6 +276,12 @@ body{
     left: 0;
     margin-top: 10px;
 }
+.fromTo-right{
+    top: 0;
+    left: auto;
+    right: 0;
+
+}
   .fromTo_input_container{
     display: flex;
     border: 1px solid white;
@@ -283,7 +290,7 @@ body{
     margin-right: 10px;
 }
 .fromTo input{
-    width: 30px;
+    width: 50px;
     border-radius: 5px;
     border: 1px solid transparent;
     text-align: center;
@@ -298,12 +305,71 @@ body{
     color: white;
   }
 .fromTo button:hover{
+    background-color: rgb(16, 16, 161);
+   
+  }
+.fromTo button:focus{
     background-color: blue;
    
   }
   .fromTo p{
-    padding: 0px 10px 0px 10px;
+    padding: 0px 5px 0px 5px;
   }
+
+  /* CONTADOR*/
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    font-size: .9em;
+    text-shadow: -1px 0px 15px rgba(0,0,0,0.25);
+    color: lightgray;
+}
+
+.number {
+    display: inline-block;
+    width: 130px;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-shadow: -1px 0px 15px rgba(37, 27, 27, 0.25);
+    border: none;
+    color: lightgray;
+    background-color: transparent;
+
+}
+
+.buttons button {
+    margin: 0 7px;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+#play {
+    background-image: url('../src/img/play.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#stop {
+    background-image: url('../src/img/stop.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#play:active {
+    background-color: lightgreen;
+}
+
+#stop:active {
+    background-color: lightcoral;
+}
 
   @media only screen and (max-width: 600px) {
     .wrap_btn {
@@ -345,6 +411,10 @@ body{
         left: 0;
         margin-top: 10px;
     }
+    .fromTo button{
+
+        width: 14px;
+    }
     .fromTo_input_container {
         font-size: .7em;
        
@@ -352,6 +422,54 @@ body{
     .fromTo input {
         font-size: .7em;
        
+    }
+    /* configurando temporizzador*/
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        align-content: stretch;
+    }
+    .fromTo-right {
+        width: 21%;
+        left: inherit;
+        right: -27px;
+    }
+    .fromTo .fromTo_enviar{
+        width: 100px;
+    }
+    .container_clock{
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    .buttons button {
+        margin: 0 7px;
+        padding: 10px;
+        border: none;
+        border-radius: 50%;
+    }
+    #stop, #play {
+       
+        background-size: contain;
+    }
+    .clock {
+        font-size: 1.9em;  
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;    
+    }
+    
+    .clock span{
+        font-size: .5em;
+    }
+    .fromTo input {
+        width: 21px;
+      
     }
     .campo {
         display: flex;
@@ -375,6 +493,8 @@ body{
         
     }
     table {
+         border-collapse: collapse;
+        width: 100%;
         font-size: 0.8em;
     }
     td, th {

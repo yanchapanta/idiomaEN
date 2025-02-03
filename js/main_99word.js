@@ -50,7 +50,7 @@ let listWord=[
     ["46	","anything	","algo	    ","Do you need anything else?	                        ","¿Necesitas algo más?	                                     ","'Anything' denota posibilidad"],
     ["47	","much	    ","cuánto	    ","How much is it?	                                    ","¿Cuánto cuesta?	                                     ","'Much' mide cantidad"],
     ["48	","cheaper	    ","barata	    ","I thought the clothes were cheaper	                ","Pensaba que la ropa era más barata","	                 ","'Cheaper' compara precios"],
-    ["49	","shopping	","compras	    ","I'd like to go shopping","	                        ","Me gustaría ir de compras","	                             ","'Shopping' implica adquirir bienes"],
+    ["49	","shopping	","compras	    ","I'd like to go shopping","Me gustaría ir de compras","'Shopping' implica adquirir bienes"],
     ["50	","later	    ","más tarde	","I'll come back later	                            ","Volveré más tarde","	                                         ","'Later' refiere a tiempo futuro"],
     ["51	","sorry	    ","siento	    ","I'm sorry we're sold out	                        ","Lo siento pero no nos queda","	                             ","'Sorry' expresa disculpa"],
     ["52	","cheaper	    ","barato	    ","Is there anything cheaper?	                        ","¿Hay algo más barato?	                                 ","'Cheaper' indica menor costo"],
