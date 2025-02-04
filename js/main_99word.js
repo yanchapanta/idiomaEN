@@ -172,6 +172,10 @@ teamA_wordEnglish.textContent=teamA_colWordEN;
 document.getElementById('teamA_btn_repeat').addEventListener("click",()=>{
     teamA_phraseToSpeak();  
 });
+document.getElementById('teamA_btn_repeat_ES').addEventListener("click",()=>{
+    teamA_phraseToSpeak_ES();  
+});
+
 document.getElementById('teamA_btn_repeat_word').addEventListener("click",()=>{
     teamA_wordToSpeak();
     console.log()
@@ -210,6 +214,7 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 //TRASFORMACION DE VOZ
 
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
+console.log(utterance)
 function teamA_phraseToSpeak(){
     utterance.text =teamA_colPhraseEN;
     utterance.rate="0.7";
@@ -221,10 +226,24 @@ function teamA_phraseToSpeak(){
     window.speechSynthesis.speak(utterance);   
 
     /** 
-     * Google US English _ en-US
-        Google UK English Female _ en-GB
-        Google UK English Male _ en-GB 
+     * Microsoft Helena - Spanish (Spain)   → es-ES
+     * Microsoft Laura - Spanish (Spain)   → es-ES
+     * Microsoft Pablo - Spanish (Spain)   → es-ES
+     * Google español    → es-ES
+     * Google US English →  en-US
+        Google UK English Female →  en-GB
+        Google UK English Male →  en-GB 
     */ 
+}
+function teamA_phraseToSpeak_ES(){
+    utterance.text =teamA_colPhraseES;
+    utterance.rate="0.6";
+    utterance.pitch = "1.1";  
+    utterance.name = "Microsoft Helena ";
+    utterance.voiceURI = "Microsoft Helena ";
+    utterance.lang = "es-ES";
+     
+    window.speechSynthesis.speak(utterance);   
 }
 
 function teamA_wordToSpeak(){

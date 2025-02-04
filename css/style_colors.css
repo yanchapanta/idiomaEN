@@ -435,7 +435,7 @@ body{
     .fromTo-right {
         width: 21%;
         left: inherit;
-        right: -27px;
+        right: -14px;
     }
     .fromTo .fromTo_enviar{
         width: 100px;
@@ -468,7 +468,7 @@ body{
         font-size: .5em;
     }
     .fromTo input {
-        width: 21px;
+        width: 35px;
       
     }
     .campo {
