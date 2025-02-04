@@ -181,8 +181,8 @@ function teamA_phraseToSpeak(){
 }
 function teamA_phraseToSpeak_ES(){
     utterance.text =teamA_colPhraseES;
-    utterance.rate="0.6";
-    utterance.pitch = "1.1";  
+    utterance.rate="0.5";
+    utterance.pitch = "2";  
     utterance.name = "Microsoft Helena ";
     utterance.voiceURI = "Microsoft Helena ";
     utterance.lang = "es-ES";
