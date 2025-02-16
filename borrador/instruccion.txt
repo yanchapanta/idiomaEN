@@ -1,0 +1,33 @@
+Completa la tabla con estos datos.
+DATOS:
+"
+N°	Palabra Inglés	Palabra Español	Frase Inglés	Frase Español	Explicación
+23			Hello. 		
+24			How are you? 		
+25			Fine. 		
+26			Fine, thank you. 		
+27			Okay, thanks. 		
+28			Good morning. 		
+29			Good afternoon. 		
+30			Good evening. 		
+31			Excuse me. 		
+32			What time is it? 		
+33			It is 2 o'clock. 		
+34			Thank you. 		
+35			My name is John. 		
+36			What is your name? 		
+37			Do you live here? 		
+38			Yes, I live here. 		
+39			Do you speak English? 		
+40			I speak a little English. 		
+41			Have you lived here long? 		
+42			I have lived here two years. 		
+43			Thank you. 		
+44			Goodbye. 		
+
+
+".
+No me muestres la tabla.
+Todos los datos enviame un array anidado para javascript
+En la columna de descripción ingresa el porque de la frase.un array.
+En la columna de explicación ingres el por que de la frase.

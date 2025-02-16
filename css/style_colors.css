@@ -343,6 +343,10 @@ body{
     background-color: transparent;
 
 }
+.numberWorld{
+    font-size: 0.5em ;
+    opacity: 0.8;
+}
 
 .buttons button {
     margin: 0 7px;

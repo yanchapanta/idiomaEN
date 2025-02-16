@@ -1,0 +1,293 @@
+// Usando async datos fuera
+const jsonFile = document.body.getAttribute('data-json');
+async function fetchData() {
+    try {
+        const response = await fetch(jsonFile);
+        const data = await response.json();
+        return data; // Devuelve los datos para usarlos fuera de la función
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+const  totalList=document.getElementById("totalList");
+const teamA_numStart=document.getElementById("teamA_numStart"),
+      teamA_numEnd=document.getElementById("teamA_numEnd");
+
+
+let numStart=teamA_numStart.value-1,
+numEnd=teamA_numEnd.value-1;//data.length/2 →22 
+let teamA_rowRamdon=teamA_numAleatorio(numStart,numEnd),      
+    teamA_num_random=document.getElementById("teamA_num_random");  
+
+async function useData() {
+    const data = await fetchData(); // Espera a que fetchData termine
+    // Llama a otras funciones y pasa los datos
+    totalList.textContent=data.length;
+
+    console.log('Datos de la función:', data[0][2]);
+    showColumna(data);
+    btnNext(data);
+    cargarDefault(data);
+    showLista(data);
+    btnShowMe(data);
+    btnColores(data);
+}
+useData();
+//CARGA DEFAULT
+function cargarDefault(data){
+    let teamA_colNum=data[teamA_rowRamdon][0];
+    document.addEventListener("DOMContentLoaded",(e)=>{    
+        teamA_phraseToSpeak(); 
+        teamA_num_random.textContent= teamA_colNum;
+        teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
+    
+        const teamA_numStart=document.getElementById("teamA_numStart"),
+          teamA_numEnd=document.getElementById("teamA_numEnd");
+    
+    
+        teamA_numStart.value=1;
+        teamA_numEnd.value=data.length;
+    
+        
+    });  
+}
+
+// ingresar área de estudio
+function fromToArea() {
+    const teamA_numStart=document.getElementById("teamA_numStart").value-1,
+      teamA_numEnd=document.getElementById("teamA_numEnd").value-1;
+    numStart=teamA_numStart;
+      numEnd=teamA_numEnd;
+    //numStart=teamA_numStart
+}
+  
+
+
+//Función consegir un número aleatorio
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function  teamA_numAleatorio(numStart,numEnd) {
+    const minCeiled = Math.ceil(numStart);
+    const maxFloored = Math.floor(numEnd);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
+}
+
+
+
+let teamA_inputEN_phrase=document.getElementById("teamA_inputEN_phrase"),
+    teamA_wordEnglish=document.getElementById("teamA_wordEnglish"),
+    teamA_wordSpanish=document.getElementById("teamA_wordSpanish");
+
+ 
+function showColumna(data) {
+    let teamA_colNum=data[teamA_rowRamdon][0],
+    teamA_colWordEN=data[teamA_rowRamdon][1];
+    teamA_colWordES=data[teamA_rowRamdon][2],  
+    teamA_colPhraseEN=data[teamA_rowRamdon][3],  
+    teamA_colPhraseES=data[teamA_rowRamdon][4],
+    teamA_wordEnglish.textContent=teamA_colWordEN; 
+    teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
+}
+
+// BOTON REPETIR
+document.getElementById('teamA_btn_repeat').addEventListener("click",()=>{
+    teamA_phraseToSpeak();  
+});
+document.getElementById('teamA_btn_repeat_ES').addEventListener("click",()=>{
+    teamA_phraseToSpeak_ES();  
+});
+
+document.getElementById('teamA_btn_repeat_word').addEventListener("click",()=>{
+    teamA_wordToSpeak();
+    console.log()
+});
+
+//BOTON MUESTRAME
+function btnShowMe(data){
+    document.getElementById('teamA_btn_showMe').addEventListener("click",()=>{
+       teamA_inputEN_phrase.classList.add("showYes");   
+       teamA_wordEnglish.classList.add("showYes");
+       //color atomático
+       teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+        //  teamA_fila.style.backgroundColor="red";
+        for (let i = 0; i < data.length; i++) {
+            
+            
+            if(i === teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="red";
+                //teamA_num_random.style.backgroundColor=data[i][1].trim();
+               
+            }
+            for (let j = 0; j < data[0].length; j++) {
+    
+            }        
+         } 
+    
+    });
+}
+
+//BOTON ESPAÑOL
+let teamA_inputES_phrase=document.getElementById("teamA_inputES_phrase");
+document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
+    teamA_inputES_phrase.textContent=teamA_colPhraseES;
+    teamA_wordSpanish.textContent=teamA_colWordES;
+   
+});
+
+//TRASFORMACION DE VOZ
+
+let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
+function teamA_phraseToSpeak(){
+    utterance.text =teamA_colPhraseEN;
+    utterance.rate="0.7";
+    utterance.pitch = "1.1";  
+    utterance.name = "Google US English";
+    utterance.voiceURI = "Google US English";
+    utterance.lang = "en-US";
+     
+    window.speechSynthesis.speak(utterance);   
+
+    /** 
+     * Microsoft Helena - Spanish (Spain)   → es-ES
+     * Microsoft Laura - Spanish (Spain)   → es-ES
+     * Microsoft Pablo - Spanish (Spain)   → es-ES
+     * Google español    → es-ES
+     * Google US English →  en-US
+        Google UK English Female →  en-GB
+        Google UK English Male →  en-GB 
+    */ 
+}
+function teamA_phraseToSpeak_ES(){
+    utterance.text =teamA_colPhraseES;
+    utterance.rate="0.6";
+    utterance.pitch = "1.1";  
+    utterance.name = "Microsoft Helena ";
+    utterance.voiceURI = "Microsoft Helena ";
+    utterance.lang = "es-ES";
+     
+    window.speechSynthesis.speak(utterance);   
+}
+
+function teamA_wordToSpeak(){
+    utterance.text =teamA_colWordEN;
+    utterance.rate="0.7";
+    utterance.pitch = "1.1";  
+    utterance.name = "Google US English";
+    utterance.voiceURI = "Google US English";
+    utterance.lang = "en-US";
+     
+    window.speechSynthesis.speak(utterance);      
+}
+
+ 
+
+ /**
+  * LISTA CONTENIDO DE FRASES  team A
+  */
+const tblBody_teamA = document.createElement("tbody");
+const teamA_tablas=document.getElementById("teamA_tablas");
+function showLista(data){
+    for (let i = 0; i < data.length; i++) {
+        const hilera = document.createElement("tr");
+             hilera.setAttribute("id",`teamA_fila${i}`);
+     
+        for (let j = 0; j < data[0].length; j++) {
+          const celda = document.createElement("td");
+          const textoCelda = document.createTextNode(data[i][j]
+          );
+          celda.appendChild(textoCelda);
+          hilera.appendChild(celda);
+        }
+        
+        tblBody_teamA.appendChild(hilera);
+        
+     }
+     teamA_tablas.appendChild(tblBody_teamA);
+
+}
+
+
+//COLOREAR FILAS teamA
+let teamA_fila=" ";
+function btnColores(data){
+    teamA_num_random.addEventListener("click",()=>{    
+        
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+        //  teamA_fila.style.backgroundColor="red";
+        for (let i = 0; i < data.length; i++) {
+            
+            
+            if(i === teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="red";
+               
+            }
+            for (let j = 0; j < data[0].length; j++) {
+    
+            }        
+         }
+        
+    });
+}
+
+
+
+
+//teamA boton siguiente teamA
+let teamA_btn_next=document.getElementById('teamA_btn_next');
+
+function btnNext(data){
+    teamA_btn_next.addEventListener("click",()=>{
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+    
+    
+        for (let i = 0; i < data.length; i++) {
+            
+            if(i !== teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="green";
+            }
+            if(i === teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="red";
+                teamA_num_random.style.backgroundColor="transparent";
+                
+            }
+            for (let j = 0; j < data[0].length; j++) {
+    
+            }
+            
+         }
+    
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+        teamA_rowRamdon=teamA_numAleatorio(numStart,numEnd);
+        teamA_colNum=data[teamA_rowRamdon][0],  
+        teamA_colWordEN=data[teamA_rowRamdon][1],  
+        teamA_colWordES=data[teamA_rowRamdon][2],  
+        teamA_colPhraseEN=data[teamA_rowRamdon][3],  
+        teamA_colPhraseES=data[teamA_rowRamdon][4],
+    
+        
+        teamA_phraseToSpeak();
+       
+      
+        teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
+        teamA_wordEnglish.textContent=teamA_colWordEN; 
+        teamA_wordSpanish.textContent=teamA_colWordES;
+        teamA_num_random.textContent=  teamA_colNum;
+        teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
+        //teamA_fila.style.backgroundColor="red";
+    
+        teamA_inputES_phrase.textContent=" ";
+        teamA_wordSpanish.textContent=" ";
+        teamA_inputEN_phrase.classList.remove("showYes");
+        teamA_wordEnglish.classList.remove("showYes");     
+    
+    });
+}
+
+teamA_wordEnglish.addEventListener("click",()=>{
+    teamA_wordToSpeak();
+});
+
+
+
