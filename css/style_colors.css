@@ -103,6 +103,15 @@ body{
     height: 20px;
     text-align: center;
 }
+.index001{
+    z-index: 3;
+}
+.index002{
+    z-index: 4;
+}
+.index003{
+    z-index: 5;
+}
 .btn_repeat{
     background-color: transparent;
     background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_repeat.svg");
@@ -141,7 +150,7 @@ body{
     width: 100%;
 }
 .btn_controls object{
-    z-index: -1;
+    z-index: 1;
 }
 
 /* btn_navigation BOTONES DE NAVAGACION*/
@@ -204,6 +213,7 @@ body{
     bottom: 0;
     right: 0;
     margin: auto;
+    z-index: 90;
    font-size: 7rem;
    color: wheat;
    border-radius: 50%;   
@@ -275,6 +285,7 @@ body{
     top: 0;
     left: 0;
     margin-top: 10px;
+    z-index: 8;
 }
 .fromTo-right{
     top: 0;
@@ -323,6 +334,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .clock {
@@ -388,6 +400,7 @@ body{
     .btn_container {
         height: 53vh;
         height: 53vh;
+        /*z-index: -1;*/
     }
     .btn_container_central {
         display: flex;
@@ -405,6 +418,7 @@ body{
     .img_animation {
         height: 25vw;
         width: 25vw;
+        z-index: 1;
        
     }
     .fromTo {
@@ -447,6 +461,7 @@ body{
     .container_clock{
         border: 1px solid white;
         border-radius: 10px;
+        z-index: 9;
     }
     .buttons button {
         margin: 0 7px;
