@@ -3,7 +3,7 @@ let inputs, clock, alarm, hours, minutes, seconds, repeater; /* Declaro todas la
 window.addEventListener('load', () => { /* Espero a que cargue el documento */
     inputs = Array.from(document.getElementsByClassName('number')); /* Busco los inputs */
     clock = document.querySelector('.clock'); /* Busco el reloj */
-    alarm = new Audio('src/sound/alarm.mp3'); /* Genero la alarma */
+    alarm = new Audio('../src/sound/alarm.mp3'); /* Genero la alarma */
 });
 
 /* Funcion principal */ 
