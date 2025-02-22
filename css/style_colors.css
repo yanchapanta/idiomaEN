@@ -51,6 +51,36 @@ body{
 .wrap_btn{
     position: relative;
 }
+.introduction-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btnAuto-container{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    border: 3px solid white;
+    padding: .5em;
+
+}
+.btnAuto{
+    margin: .3rem;
+    padding: 0.2em;
+    border-radius: 5px;
+    background-color: rgb(12, 12, 240);
+    color: white;
+    cursor: pointer;
+}.btnAuto-wrap1{
+    display: flex;
+    flex-direction: column;
+}
+.btnAuto:hover {
+    background-color: rgb(26, 26, 153);
+  }
+  .btnAuto:active {
+    background-color: rgb(20, 20, 94);
+  }
 .btn_container{
     position: relative;
     width: 62%;
@@ -112,9 +142,17 @@ body{
 .index003{
     z-index: 5;
 }
-.btn_repeat{
+.btn_repeatEn{
     background-color: transparent;
-    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_repeat.svg");
+    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_repeatEn.svg");
+    background-repeat: no-repeat;
+     cursor:pointer;  
+
+    
+}
+.btn_repeatEs{
+    background-color: transparent;
+    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_repeatEs.svg");
     background-repeat: no-repeat;
      cursor:pointer;  
 
@@ -122,18 +160,26 @@ body{
 }
 .btn_showMe{
     background-color: transparent;
-    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_show.svg");
+    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_en.svg");
     background-repeat: no-repeat;
      cursor:pointer;  
     
 }
-.btn_next{
+.btn_nextEn{
     background-color: transparent;
-    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_nextTo.svg");
+    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_nextToEn.svg");
     background-repeat: no-repeat;
      cursor:pointer;  
     
 }
+.btn_nextEs{
+    background-color: transparent;
+    background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_nextToEs.svg");
+    background-repeat: no-repeat;
+     cursor:pointer;  
+    
+}
+
 .btn_spanish{
     background-color: transparent;
     background-image:url("https://yanchapanta.github.io/idiomaEN/src/img/btn_es.svg");

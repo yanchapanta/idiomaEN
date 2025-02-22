@@ -37,7 +37,7 @@
             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         </p>
         
-        <span id="teamA_wordEnglish" class="wordEnglish showNo">word English</span>
+        <span id="teamA_wordEnglish" class="wordEnglish showNo">word-EN</span>
     </div>
     <div class="wrap_btn">
         <div class="fromTo">    
@@ -50,31 +50,21 @@
             <button class="fromTo_enviar" onclick="fromToArea()">Enviar</button>
         </div>
         <div class="fromTo fromTo-right">
-            <div class="container container_clock">
-                <!--
-                https://www.youtube.com/watch?v=-LbVgpqKuDw
-                -->
-                <div class="clock">
-                    <input class="number" type="text" maxlength="2" value="00"><span>hs</span><input class="number" type="text" maxlength="2" value="00"><span>min</span><input class="number" type="text" maxlength="2" value="00"><span>sec</span>
-                </div>
-                <div class="buttons">
-                    <button id="play" onclick="startTimer()"></button>
-                    <button id="stop" onclick="stopTimer()"></button>
-                </div>
-            </div>
+           
         </div>
         <div class="btn_container">
             <div class="index001">
-                <input id="teamA_btn_repeat" class="btn_repeat" type="button">
-                <input id="teamA_btn_repeat_word" class="btn_repeat_word" type="text" value="word">
-                <input id="teamA_btn_repeat_ES" class="btn_repeat" type="button">
+                <input id="teamA_btn_repeat" class="btn_repeatEn" type="button">
+                <input id="teamA_btn_repeat_word" class="btn_repeat_word" type="button" value="word">
+                <input id="teamA_btn_repeat_ES" class="btn_repeatEs" type="button">
             </div>
             <div class="btn_container_central index002">
                 <input id="teamA_btn_showMe" class="btn_showMe" type="button">
                 <input id="teamA_btn_spanish" class="btn_spanish" type="button">
             </div>
             <div class="index003">
-                <input id="teamA_btn_next" class="btn_next" type="button">
+                <input id="teamA_btn_next" class="btn_nextEn" type="button">
+                <input id="teamA_btn_nextES" class="btn_nextEs" type="button">
 
             </div>
             <div class="img_animation"></div>
@@ -91,21 +81,51 @@
     </div>
     <br>
     <br>
+    <div class="introduction-container">
+
+        <div class="btnAuto-container">
+            <div class="btnAuto-wrap1">
+                <input id="teamA_btn_autoES" class="btnAuto" type="button" value="Auto ES">
+                <input id="teamA_btn_autoEN" class="btnAuto" type="button" value="Auto EN">
+                
+            </div>
+            <input id="teamA_btn_autoPausar" class="btnAuto" type="button" value="Pausar">
+    
+        </div>
+        <div class="container container_clock">
+            <!--
+            https://www.youtube.com/watch?v=-LbVgpqKuDw
+            -->
+            <div class="clock">
+                <input class="number" type="text" maxlength="2" value="00"><span>hs</span><input class="number" type="text" maxlength="2" value="00"><span>min</span><input class="number" type="text" maxlength="2" value="00"><span>sec</span>
+            </div>
+            <div class="buttons">
+                <button id="play" onclick="startTimer()"></button>
+                <button id="stop" onclick="stopTimer()"></button>
+            </div>
+        </div>
+    </div>
     <br>
     <br>
     <h3>Contenido</h3>
-    <ul>
-        <li>Listen to the example. del  1 al 22</li>
-        <li>1.1 Repeat each sentence. del 23 al 44</li>
-        <li>Listen to the example.Del 45 al 53 </li>
-        <li>1.2 Repeat each sentence.Del 54 al 69</li>
-        <li>Listen to the Example. Del 70 al 81</li>
-        <li>1.3 Repeat each sentence.Del 82 al 91</li>
-        <li>1.6 Repeat each sentence. Del 92 al 133</li>
-        <li>1.8 Repeat each sentence. Del 134 al 140</li>
-        <li>1.9 Repeat each sentence after saying, "Excuse me." Del 141 al 167</li>
-        
-    </ul>
+    
+
+    <div>
+        <ul>
+            <li>Listen to the example. del  1 al 22</li>
+            <li>1.1 Repeat each sentence. del 23 al 44</li>
+            <li>Listen to the example.Del 45 al 53 </li>
+            <li>1.2 Repeat each sentence.Del 54 al 69</li>
+            <li>Listen to the Example. Del 70 al 81</li>
+            <li>1.3 Repeat each sentence.Del 82 al 91</li>
+            <li>1.6 Repeat each sentence. Del 92 al 133</li>
+            <li>1.8 Repeat each sentence. Del 134 al 140</li>
+            <li>1.9 Repeat each sentence after saying, "Excuse me." Del 141 al 167</li>
+            
+        </ul>
+
+    </div>
+       
         
 
     <table id="teamA_tablas">

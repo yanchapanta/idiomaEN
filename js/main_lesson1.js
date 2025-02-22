@@ -27,10 +27,14 @@ async function useData() {
     console.log('Datos de la función:', data[0][2]);
     showColumna(data);
     btnNext(data);
+    btnNextES(data);
     cargarDefault(data);
     showLista(data);
     btnShowMe(data);
     btnColores(data);
+    btnAutoES(data);
+    btnAutoEN(data);
+    btnAutoPausar(data);
 }
 useData();
 //CARGA DEFAULT
@@ -88,6 +92,7 @@ function showColumna(data) {
     teamA_colPhraseEN=data[teamA_rowRamdon][3],  
     teamA_colPhraseES=data[teamA_rowRamdon][4],
     teamA_wordEnglish.textContent=teamA_colWordEN; 
+    teamA_wordSpanish.textContent=teamA_colWordES; 
     teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
 }
 
@@ -171,7 +176,18 @@ function teamA_phraseToSpeak_ES(){
 }
 
 function teamA_wordToSpeak(){
-    utterance.text =teamA_colWordEN;
+    //teamA_wordEnglish
+    utterance.text =teamA_wordEnglish.textContent;
+    utterance.rate="0.7";
+    utterance.pitch = "1.1";  
+    utterance.name = "Google US English";
+    utterance.voiceURI = "Google US English";
+    utterance.lang = "en-US";
+     
+    window.speechSynthesis.speak(utterance);      
+}
+function teamA_wordToSpeakES(){
+    utterance.text =teamA_wordSpanish.textContent;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  
     utterance.name = "Google US English";
@@ -233,14 +249,14 @@ function btnColores(data){
 
 
 
-
 //teamA boton siguiente teamA
 let teamA_btn_next=document.getElementById('teamA_btn_next');
+let teamA_btn_nextES=document.getElementById('teamA_btn_nextES');
 
 function btnNext(data){
     teamA_btn_next.addEventListener("click",()=>{
-        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
-    
+
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
     
         for (let i = 0; i < data.length; i++) {
             
@@ -284,10 +300,186 @@ function btnNext(data){
     
     });
 }
+function btnNextES(data){
+    teamA_btn_nextES.addEventListener("click",()=>{
+
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
+    
+        for (let i = 0; i < data.length; i++) {
+            
+            if(i !== teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="green";
+            }
+            if(i === teamA_rowRamdon){
+                teamA_fila.style.backgroundColor="red";
+                teamA_num_random.style.backgroundColor="transparent";
+                
+            }
+            for (let j = 0; j < data[0].length; j++) {
+    
+            }
+            
+         }
+    
+        teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+        teamA_rowRamdon=teamA_numAleatorio(numStart,numEnd);
+        teamA_colNum=data[teamA_rowRamdon][0],  
+        teamA_colWordEN=data[teamA_rowRamdon][1],  
+        teamA_colWordES=data[teamA_rowRamdon][2],  
+        teamA_colPhraseEN=data[teamA_rowRamdon][3],  
+        teamA_colPhraseES=data[teamA_rowRamdon][4],
+    
+        
+        teamA_phraseToSpeak_ES();
+       
+      
+        teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
+        teamA_wordEnglish.textContent=teamA_colWordEN; 
+        teamA_wordSpanish.textContent=teamA_colWordES;
+        teamA_num_random.textContent=  teamA_colNum;
+        teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
+        //teamA_fila.style.backgroundColor="red";
+    
+        teamA_inputES_phrase.textContent=" ";
+        teamA_wordSpanish.textContent=" ";
+        teamA_inputEN_phrase.classList.remove("showYes");
+        teamA_wordEnglish.classList.remove("showYes");     
+    
+    });
+}
 
 teamA_wordEnglish.addEventListener("click",()=>{
     teamA_wordToSpeak();
 });
+teamA_wordSpanish.addEventListener("click",()=>{
+    teamA_wordToSpeakES();
+});
 
+let teamA_btn_autoES=document.getElementById("teamA_btn_autoES"),
+    teamA_btn_autoEN=document.getElementById("teamA_btn_autoEN"),
+    teamA_btn_autoPausar=document.getElementById("teamA_btn_autoPausar");
+const palabras = ["Palabra 1", "Palabra 2", "Palabra 3"];
+let indice = 0;
+let intervaloRepetir;
+let intervaloSiguiente;
+
+
+
+function btnAutoES(data){
+    teamA_btn_autoES.addEventListener("click", ()=>{
+        clearInterval(intervaloRepetir);
+        clearInterval(intervaloSiguiente);
+        intervaloRepetir = setInterval(teamA_phraseToSpeak_ES, 8000);//10 segundos
+        intervaloSiguiente = setInterval(() => {
+            teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
+    
+            for (let i = 0; i < data.length; i++) {
+                
+                if(i !== teamA_rowRamdon){
+                    teamA_fila.style.backgroundColor="green";
+                }
+                if(i === teamA_rowRamdon){
+                    teamA_fila.style.backgroundColor="red";
+                    teamA_num_random.style.backgroundColor="transparent";
+                    
+                }
+                for (let j = 0; j < data[0].length; j++) {
+        
+                }
+                
+             }
+        
+            teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+            teamA_rowRamdon=teamA_numAleatorio(numStart,numEnd);
+            teamA_colNum=data[teamA_rowRamdon][0],  
+            teamA_colWordEN=data[teamA_rowRamdon][1],  
+            teamA_colWordES=data[teamA_rowRamdon][2],  
+            teamA_colPhraseEN=data[teamA_rowRamdon][3],  
+            teamA_colPhraseES=data[teamA_rowRamdon][4],
+        
+            
+            teamA_phraseToSpeak_ES();
+           
+          
+            teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
+            teamA_wordEnglish.textContent=teamA_colWordEN; 
+            teamA_wordSpanish.textContent=teamA_colWordES;
+            teamA_num_random.textContent=  teamA_colNum;
+            teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
+            //teamA_fila.style.backgroundColor="red";
+        
+            teamA_inputES_phrase.textContent=" ";
+            teamA_wordSpanish.textContent=" ";
+            teamA_inputEN_phrase.classList.remove("showYes");
+            teamA_wordEnglish.classList.remove("showYes");  
+
+            teamA_phraseToSpeak_ES();
+            }, 120000); // 2 minutos 180000 
+          
+
+    });
+}
+function btnAutoEN(data){
+    teamA_btn_autoEN.addEventListener("click", ()=>{
+        clearInterval(intervaloRepetir);
+        clearInterval(intervaloSiguiente);
+        intervaloRepetir = setInterval(teamA_phraseToSpeak, 8000);//10 segundos
+        intervaloSiguiente = setInterval(() => {
+            teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
+    
+            for (let i = 0; i < data.length; i++) {
+                
+                if(i !== teamA_rowRamdon){
+                    teamA_fila.style.backgroundColor="green";
+                }
+                if(i === teamA_rowRamdon){
+                    teamA_fila.style.backgroundColor="red";
+                    teamA_num_random.style.backgroundColor="transparent";
+                    
+                }
+                for (let j = 0; j < data[0].length; j++) {
+        
+                }
+                
+             }
+        
+            teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);
+            teamA_rowRamdon=teamA_numAleatorio(numStart,numEnd);
+            teamA_colNum=data[teamA_rowRamdon][0],  
+            teamA_colWordEN=data[teamA_rowRamdon][1],  
+            teamA_colWordES=data[teamA_rowRamdon][2],  
+            teamA_colPhraseEN=data[teamA_rowRamdon][3],  
+            teamA_colPhraseES=data[teamA_rowRamdon][4],
+        
+            
+            teamA_phraseToSpeak();
+           
+          
+            teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
+            teamA_wordEnglish.textContent=teamA_colWordEN; 
+            teamA_wordSpanish.textContent=teamA_colWordES;
+            teamA_num_random.textContent=  teamA_colNum;
+            teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
+            //teamA_fila.style.backgroundColor="red";
+        
+            teamA_inputES_phrase.textContent=" ";
+            teamA_wordSpanish.textContent=" ";
+            teamA_inputEN_phrase.classList.remove("showYes");
+            teamA_wordEnglish.classList.remove("showYes");  
+
+            teamA_phraseToSpeak();
+            }, 120000); // 2 minutos 180000 
+          
+
+    });
+}
+
+function btnAutoPausar(data){
+    teamA_btn_autoPausar.addEventListener("click", ()=>{
+        console.log("btnAutoPausar")
+        clearInterval(intervaloRepetir);
+        clearInterval(intervaloSiguiente);       
+    });
+}
 
 
