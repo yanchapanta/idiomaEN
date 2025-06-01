@@ -369,7 +369,7 @@ function btnAutoES(data){
     teamA_btn_autoES.addEventListener("click", ()=>{
         clearInterval(intervaloRepetir);
         clearInterval(intervaloSiguiente);
-        intervaloRepetir = setInterval(teamA_phraseToSpeak_ES, 8000);//10 segundos
+        intervaloRepetir = setInterval(teamA_phraseToSpeak_ES, 7000);//10 segundos
         intervaloSiguiente = setInterval(() => {
             teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
     
@@ -414,7 +414,7 @@ function btnAutoES(data){
             teamA_wordEnglish.classList.remove("showYes");  
 
             teamA_phraseToSpeak_ES();
-            }, 120000); // 2 minutos 180000 
+            }, 40000); // 2 minutos 180000 
           
 
     });
@@ -423,7 +423,7 @@ function btnAutoEN(data){
     teamA_btn_autoEN.addEventListener("click", ()=>{
         clearInterval(intervaloRepetir);
         clearInterval(intervaloSiguiente);
-        intervaloRepetir = setInterval(teamA_phraseToSpeak, 8000);//10 segundos
+        intervaloRepetir = setInterval(teamA_phraseToSpeak, 7000);//10 segundos
         intervaloSiguiente = setInterval(() => {
             teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
     
@@ -468,7 +468,7 @@ function btnAutoEN(data){
             teamA_wordEnglish.classList.remove("showYes");  
 
             teamA_phraseToSpeak();
-            }, 120000); // 2 minutos 180000 
+            }, 30000); // 1 minutos 180000 
           
 
     });
