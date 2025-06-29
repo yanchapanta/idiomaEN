@@ -384,7 +384,7 @@ function btnAutoES(data){
     teamA_btn_autoES.addEventListener("click", ()=>{
         clearInterval(intervaloRepetir);
         clearInterval(intervaloSiguiente);
-        intervaloRepetir = setInterval(teamA_phraseToSpeak_ES, 11000);//10 segundos
+        intervaloRepetir = setInterval(teamA_phraseToSpeak_ES, 6000);//10 segundos
         intervaloSiguiente = setInterval(() => {
             teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
     
@@ -438,7 +438,7 @@ function btnAutoEN(data){
     teamA_btn_autoEN.addEventListener("click", ()=>{
         clearInterval(intervaloRepetir);
         clearInterval(intervaloSiguiente);
-        intervaloRepetir = setInterval(teamA_phraseToSpeak, 11000);//10 segundos
+        intervaloRepetir = setInterval(teamA_phraseToSpeak, 6000);//10 segundos
         intervaloSiguiente = setInterval(() => {
             teamA_fila=document.getElementById(`teamA_fila${teamA_rowRamdon}`);    
     
