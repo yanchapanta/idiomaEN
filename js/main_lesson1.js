@@ -54,6 +54,7 @@ function cargarDefault(data){
     
         
     });  
+ 
 }
 
 // ingresar área de estudio
@@ -145,6 +146,9 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 function teamA_phraseToSpeak(){
+      // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     utterance.text =teamA_colPhraseEN;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  
@@ -164,7 +168,13 @@ function teamA_phraseToSpeak(){
         Google UK English Male →  en-GB 
     */ 
 }
+
+
 function teamA_phraseToSpeak_ES(){
+
+      // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     utterance.text =teamA_colPhraseES;
     utterance.rate="0.6";
     utterance.pitch = "1.1";  
@@ -176,6 +186,8 @@ function teamA_phraseToSpeak_ES(){
 }
 
 function teamA_wordToSpeak(){
+      // stop any speaking in progress
+    window.speechSynthesis.cancel();
     //teamA_wordEnglish
     utterance.text =teamA_wordEnglish.textContent;
     utterance.rate="0.7";
@@ -187,6 +199,9 @@ function teamA_wordToSpeak(){
     window.speechSynthesis.speak(utterance);      
 }
 function teamA_wordToSpeakES(){
+      // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     utterance.text =teamA_wordSpanish.textContent;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  
