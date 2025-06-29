@@ -130,6 +130,9 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 function teamA_phraseToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
+    
     utterance.text =teamA_colPhraseEN;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  
@@ -147,6 +150,9 @@ function teamA_phraseToSpeak(){
 }
 
 function teamA_wordToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     utterance.text =teamA_colWordEN;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  

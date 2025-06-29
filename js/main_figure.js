@@ -160,6 +160,9 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 console.log(utterance)
 function teamA_phraseToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel(); 
+    
     utterance.text =teamA_colPhraseEN;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  
@@ -180,6 +183,9 @@ function teamA_phraseToSpeak(){
     */ 
 }
 function teamA_phraseToSpeak_ES(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel(); 
+
     utterance.text =teamA_colPhraseES;
     utterance.rate="0.5";
     utterance.pitch = "0.5";  
@@ -191,6 +197,9 @@ function teamA_phraseToSpeak_ES(){
 }
 
 function teamA_wordToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel(); 
+
     utterance.text =teamA_colWordEN;
     utterance.rate="0.7";
     utterance.pitch = "1.1";  

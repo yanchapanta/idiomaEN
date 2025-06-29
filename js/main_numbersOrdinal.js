@@ -189,6 +189,8 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 
 function ABCD_phraseToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
     //utterance.text =listWord[ABCD_numAleatorio()][2];   
     utterance.text =ABCD_colPhraseEN;
     utterance.rate="0.7";
@@ -206,6 +208,9 @@ function ABCD_phraseToSpeak(){
     */ 
 }
 function teamA_phraseToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     //utterance.text =listWord[ABCD_numAleatorio()][2];   
     utterance.text =teamA_colPhraseEN;
     utterance.rate="0.7";
@@ -223,6 +228,9 @@ function teamA_phraseToSpeak(){
     */ 
 }
 function ABCD_wordToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     //utterance.text =listWord[ABCD_numAleatorio()][2];   
     utterance.text =ABCD_colWordEN;
     utterance.rate="0.7";
@@ -234,6 +242,9 @@ function ABCD_wordToSpeak(){
     window.speechSynthesis.speak(utterance);      
 }
 function teamA_wordToSpeak(){
+    // stop any speaking in progress
+    window.speechSynthesis.cancel();
+
     //utterance.text =listWord[ABCD_numAleatorio()][2];   
     utterance.text =teamA_colWordEN;
     utterance.rate="0.7";

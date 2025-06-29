@@ -146,7 +146,7 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 function teamA_phraseToSpeak(){
-      // stop any speaking in progress
+    // stop any speaking in progress ok
     window.speechSynthesis.cancel();
 
     utterance.text =teamA_colPhraseEN;
