@@ -158,6 +158,8 @@ function teamA_phraseToSpeak(){
      
     window.speechSynthesis.speak(utterance);   
 
+
+    
     /** 
      * Microsoft Helena - Spanish (Spain)   → es-ES
      * Microsoft Laura - Spanish (Spain)   → es-ES
