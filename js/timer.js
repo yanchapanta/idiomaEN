@@ -1,71 +1,51 @@
-let inputs, clock, alarm, hours, minutes, seconds, repeater; /* Declaro todas las variables que necesito */
+let inputs, clock, alarm, timerWorker;
 
-window.addEventListener('load', () => { /* Espero a que cargue el documento */
-    inputs = Array.from(document.getElementsByClassName('number')); /* Busco los inputs */
-    clock = document.querySelector('.clock'); /* Busco el reloj */
-    alarm = new Audio('../src/sound/alarm.mp3'); /* Genero la alarma */
+window.addEventListener('load', () => {
+  inputs = Array.from(document.getElementsByClassName('number'));
+  clock = document.querySelector('.clock');
+  alarm = new Audio('../src/sound/alarm.mp3');
+  
+  // Crear Web Worker
+  timerWorker = new Worker('../js/timer-worker.js');
+  
+  timerWorker.onmessage = function(e) {
+    const { action, hours, minutes, seconds } = e.data;
+    
+    if (action === 'update') {
+      updateDisplay(hours, minutes, seconds);
+    } else if (action === 'alarm') {
+      alarm.play();
+    }
+  };
 });
 
-/* Funcion principal */ 
-function startTimer() { 
-    parseTime(); /* Busco y transformo los valores del input a numeros */
-    setTimer();  /* Seteo el timer visualmente */
-    countdown()  /* Arranco el contador */
+function startTimer() {
+  parseTime();
+  updateDisplay(hours, minutes, seconds);
+  
+  // Enviar al Web Worker
+  timerWorker.postMessage({
+    action: 'start',
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds
+  });
 }
 
-/* Funcion para cambiar el timer en la pantalla y en la pestaña */
-function setTimer() {
-    /* Cambio la hora en pantalla */
-    clock.innerHTML = `<p class="number">${hours > 9 ? hours : ('0' + hours)}</p><span>hs</span><p class="number">${minutes > 9 ? minutes : ('0' + minutes)}</p><span>min</span><p class="number">${seconds > 9 ? seconds : ('0' + seconds)}</p><span>sec</span>`;
-
-    /* Cambio la hora en la pestaña */
-    document.title = `${hours > 9 ? hours : ('0' + hours)}:${minutes > 9 ? minutes : ('0' + minutes)}:${seconds > 9 ? seconds : ('0' + seconds)}`;
+function stopTimer() {
+  timerWorker.postMessage({ action: 'stop' });
+  alarm.pause();
+  alarm.currentTime = 0;
+  location.reload();
 }
 
-/* Funcion para convertir el string del input a numeros */
 function parseTime() {
-
-    hours = Number(inputs[0].value);
-    minutes = Number(inputs[1].value);
-    seconds = Number(inputs[2].value);
-
+  hours = Number(inputs[0].value);
+  minutes = Number(inputs[1].value);
+  seconds = Number(inputs[2].value);
 }
 
-/* Funcion que arranca el contador */
-function countdown() {
-    repeater = setInterval(runner,1000);
-}
-
-/* Funcion que cuenta */
-function runner() {
-    /* Si tengo más de 0 segundos, restá segundos */
-    /* Si tengo 0 segundos pero tengo más de 0 minutos, poné segundos en 59 y restale 1 a minutos */
-    /* Si tengo 0 segundos, 0 minutos pero tengo más de 0 horas, poné segundos en 59, minutos en 59 y restale 1 a horas */
-    /* Sino arranca la alarma */
-    
-    if (seconds > 0) {
-        seconds--;
-    } else {
-        if (minutes > 0) {
-            seconds = 59;
-            minutes--;
-        } else {
-            if (hours > 0 ) {
-                seconds = 59;
-                minutes = 59;
-                hours--;
-            } else {
-                alarm.play();
-            }
-        }
-    }
-    
-    setTimer();
-}
-
-/* Funcion para detener el timer */
-function stopTimer(){
-    clearInterval(repeater);
-    //alarm.stop();
-    location.reload();
+function updateDisplay(h, m, s) {
+  clock.innerHTML = `<p class="number">${h > 9 ? h : ('0' + h)}</p><span>hs</span><p class="number">${m > 9 ? m : ('0' + m)}</p><span>min</span><p class="number">${s > 9 ? s : ('0' + s)}</p><span>sec</span>`;
+  document.title = `${h > 9 ? h : ('0' + h)}:${m > 9 ? m : ('0' + m)}:${s > 9 ? s : ('0' + s)}`;
 }

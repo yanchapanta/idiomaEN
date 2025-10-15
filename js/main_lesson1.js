@@ -34,7 +34,8 @@ async function useData() {
     btnColores(data);
     btnAutoES(data);
     btnAutoEN(data);
-    btnAutoPausar(data);
+    btnAutoENforTest(data);
+    btnAutoPausar(data);    
 }
 useData();
 //CARGA DEFAULT
@@ -149,26 +150,32 @@ function teamA_phraseToSpeak(){
     // stop any speaking in progress ok
     window.speechSynthesis.cancel();
 
-    utterance.text =teamA_colPhraseEN;
-    utterance.rate="0.7";
-    utterance.pitch = "1.1";  
-    utterance.name = "Google US English";
-    utterance.voiceURI = "Google US English";
+    // Crear nuevo utterance para evitar conflictos
+    const utterance = new SpeechSynthesisUtterance();
+    
+    utterance.text = teamA_colPhraseEN;
+    utterance.rate = 0.65;        // ⭐ Más lento para efecto musical
+    utterance.pitch = 1.3;        // ⭐ Tono más alto para canto
+    utterance.volume = 1.0;
     utterance.lang = "en-US";
      
-    window.speechSynthesis.speak(utterance);   
-
-
+    // Buscar voces más expresivas en inglés
+    const voices = speechSynthesis.getVoices();
+    const singingVoice = voices.find(voice => 
+        voice.lang.includes('en') && 
+        (voice.name.includes('Google') || 
+         voice.name.includes('Samantha') ||
+         voice.name.includes('Karen') ||
+         voice.name.includes('Alex') ||
+         voice.name.includes('Victoria'))
+    );
     
-    /** 
-     * Microsoft Helena - Spanish (Spain)   → es-ES
-     * Microsoft Laura - Spanish (Spain)   → es-ES
-     * Microsoft Pablo - Spanish (Spain)   → es-ES
-     * Google español    → es-ES
-     * Google US English →  en-US
-        Google UK English Female →  en-GB
-        Google UK English Male →  en-GB 
-    */ 
+    if (singingVoice) {
+        utterance.voice = singingVoice;
+        console.log('🎵 Usando voz para canto:', singingVoice.name);
+    }
+    
+    window.speechSynthesis.speak(utterance);   
 }
 
 
@@ -178,8 +185,8 @@ function teamA_phraseToSpeak_ES(){
     window.speechSynthesis.cancel();
 
     utterance.text =teamA_colPhraseES;
-    utterance.rate="0.6";
-    utterance.pitch = "1.1";  
+    utterance.rate="0.7";//0.5 más lento a 2.0 más rápido
+    utterance.pitch = "0.9";  //0.8 tono más lento a 1.5 tono más rápido
     utterance.name = "Microsoft Helena ";
     utterance.voiceURI = "Microsoft Helena ";
     utterance.lang = "es-ES";
@@ -192,24 +199,41 @@ function teamA_wordToSpeak(){
     window.speechSynthesis.cancel();
     //teamA_wordEnglish
     utterance.text =teamA_wordEnglish.textContent;
-    utterance.rate="0.7";
-    utterance.pitch = "1.1";  
+     utterance.rate="0.7";//0.5 más lento a 2.0 más rápido
+    utterance.pitch = "0.9";  //0.8 tono más lento a 1.5 tono más rápido 
     utterance.name = "Google US English";
     utterance.voiceURI = "Google US English";
     utterance.lang = "en-US";
      
     window.speechSynthesis.speak(utterance);      
 }
+
 function teamA_wordToSpeakES(){
-      // stop any speaking in progress
     window.speechSynthesis.cancel();
 
-    utterance.text =teamA_wordSpanish.textContent;
-    utterance.rate="0.7";
-    utterance.pitch = "1.1";  
-    utterance.name = "Google US English";
-    utterance.voiceURI = "Google US English";
-    utterance.lang = "en-US";
+    const word = teamA_wordSpanish.textContent;
+    
+    // Crear nuevo utterance para evitar conflictos
+    const utterance = new SpeechSynthesisUtterance(word);
+    
+    // Configuración de canto
+    utterance.rate = 0.7;        // Velocidad
+    utterance.pitch = 1.3;       // ⭐ Tono más alto para efecto musical
+    utterance.volume = 1.0;
+    utterance.lang = "es-ES";    // Mejor usar español para palabras españolas
+    
+    // Buscar voz en español
+    const voices = speechSynthesis.getVoices();
+    const spanishVoice = voices.find(voice => 
+        voice.lang.includes('es') || 
+        voice.name.includes('Spanish') ||
+        voice.name.includes('Helena') ||
+        voice.name.includes('Laura')
+    );
+    
+    if (spanishVoice) {
+        utterance.voice = spanishVoice;
+    }
      
     window.speechSynthesis.speak(utterance);      
 }
@@ -374,6 +398,7 @@ teamA_wordSpanish.addEventListener("click",()=>{
 
 let teamA_btn_autoES=document.getElementById("teamA_btn_autoES"),
     teamA_btn_autoEN=document.getElementById("teamA_btn_autoEN"),
+    teamA_btn_autoENtest=document.getElementById("teamA_btn_autoENtest"),
     teamA_btn_autoPausar=document.getElementById("teamA_btn_autoPausar");
 const palabras = ["Palabra 1", "Palabra 2", "Palabra 3"];
 let indice = 0;
@@ -436,6 +461,7 @@ function btnAutoES(data){
 
     });
 }
+
 function btnAutoEN(data){
     teamA_btn_autoEN.addEventListener("click", ()=>{
         clearInterval(intervaloRepetir);
@@ -469,27 +495,29 @@ function btnAutoEN(data){
             teamA_colPhraseES=data[teamA_rowRamdon][4],
         
             
-            teamA_phraseToSpeak();
-           
-          
+            teamA_phraseToSpeak(); 
+            
+            
             teamA_inputEN_phrase.textContent=teamA_colPhraseEN;
             teamA_wordEnglish.textContent=teamA_colWordEN; 
             teamA_wordSpanish.textContent=teamA_colWordES;
             teamA_num_random.textContent=  teamA_colNum;
             teamA_num_random.setAttribute("href",`#teamA_fila${teamA_colNum}`);
             //teamA_fila.style.backgroundColor="red";
-        
+            
             teamA_inputES_phrase.textContent=" ";
             teamA_wordSpanish.textContent=" ";
             teamA_inputEN_phrase.classList.remove("showYes");
             teamA_wordEnglish.classList.remove("showYes");  
-
+            
             teamA_phraseToSpeak();
+            
             }, 180000); // 1 minutos 180000 
           
 
     });
 }
+
 
 function btnAutoPausar(data){
     teamA_btn_autoPausar.addEventListener("click", ()=>{
@@ -500,3 +528,20 @@ function btnAutoPausar(data){
 }
 
 
+async function useData() {
+    const data = await fetchData();
+    totalList.textContent = data.length;
+    
+    console.log('Datos de la función:', data[0][2]);
+    showColumna(data);
+    btnNext(data);
+    btnNextES(data);
+    cargarDefault(data);
+    showLista(data);
+    btnShowMe(data);
+    btnColores(data);
+    btnAutoES(data);
+    btnAutoEN(data);
+    btnAutoPausar(data);
+    
+}
