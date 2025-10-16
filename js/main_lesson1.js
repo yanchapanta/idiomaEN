@@ -157,8 +157,8 @@ function teamA_phraseToSpeak(){
     const utterance = new SpeechSynthesisUtterance();
     
     utterance.text = teamA_colPhraseEN;
-    utterance.rate = 0.65;        // ⭐ Más lento para efecto musical
-    utterance.pitch = 1.3;        // ⭐ Tono más alto para canto
+    utterance.rate = 0.5;        //0.5 más lento a 2.0 más rápido
+    utterance.pitch = 0.8;        //0.8 tono más lento a 1.5 tono más rápido
     utterance.volume = 1.0;
     utterance.lang = "en-US";
      
@@ -193,8 +193,8 @@ function teamA_phraseToSpeak_ES(){
     window.speechSynthesis.cancel();
 
     utterance.text =teamA_colPhraseES;
-    utterance.rate="0.7";//0.5 más lento a 2.0 más rápido
-    utterance.pitch = "0.9";  //0.8 tono más lento a 1.5 tono más rápido
+    utterance.rate="0.5";   //0.5 más lento a 2.0 más rápido
+    utterance.pitch = "0.8";  //0.8 tono más lento a 1.5 tono más rápido
     utterance.name = "Microsoft Helena ";
     utterance.voiceURI = "Microsoft Helena ";
     utterance.lang = "es-ES";
@@ -207,8 +207,8 @@ function teamA_wordToSpeak(){
     window.speechSynthesis.cancel();
     //teamA_wordEnglish
     utterance.text =teamA_wordEnglish.textContent;
-     utterance.rate="0.7";//0.5 más lento a 2.0 más rápido
-    utterance.pitch = "0.9";  //0.8 tono más lento a 1.5 tono más rápido 
+     utterance.rate="0.5";//0.5 más lento a 2.0 más rápido
+    utterance.pitch = "0.8";  //0.8 tono más lento a 1.5 tono más rápido 
     utterance.name = "Google US English";
     utterance.voiceURI = "Google US English";
     utterance.lang = "en-US";
@@ -228,8 +228,8 @@ function teamA_wordToSpeakES(){
     const utterance = new SpeechSynthesisUtterance(word);
     
     // Configuración de canto
-    utterance.rate = 0.7;        // Velocidad
-    utterance.pitch = 1.3;       // ⭐ Tono más alto para efecto musical
+    utterance.rate = 0.8;        // Velocidad
+    utterance.pitch = 0.8;       // ⭐ Tono más alto para efecto musical
     utterance.volume = 1.0;
     utterance.lang = "es-ES";    // Mejor usar español para palabras españolas
     
