@@ -147,6 +147,9 @@ document.getElementById('teamA_btn_spanish').addEventListener("click",()=>{
 
 let utterance = new SpeechSynthesisUtterance();/* convierte texto a voz */
 function teamA_phraseToSpeak(){
+     // Solicitar Wake Lock para mantener la app activa un poco más
+    requestWakeLock();
+
     // stop any speaking in progress ok
     window.speechSynthesis.cancel();
 
@@ -176,6 +179,11 @@ function teamA_phraseToSpeak(){
     }
     
     window.speechSynthesis.speak(utterance);   
+
+     // Liberar Wake Lock después de un tiempo
+    setTimeout(() => {
+        releaseWakeLock();
+    }, 5000);
 }
 
 
@@ -211,6 +219,7 @@ function teamA_wordToSpeak(){
 function teamA_wordToSpeakES(){
      // Solicitar Wake Lock para mantener la app activa un poco más
     requestWakeLock();
+
     window.speechSynthesis.cancel();
 
     const word = teamA_wordSpanish.textContent;
