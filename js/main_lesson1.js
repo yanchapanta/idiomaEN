@@ -209,6 +209,8 @@ function teamA_wordToSpeak(){
 }
 
 function teamA_wordToSpeakES(){
+     // Solicitar Wake Lock para mantener la app activa un poco más
+    requestWakeLock();
     window.speechSynthesis.cancel();
 
     const word = teamA_wordSpanish.textContent;
@@ -235,7 +237,12 @@ function teamA_wordToSpeakES(){
         utterance.voice = spanishVoice;
     }
      
-    window.speechSynthesis.speak(utterance);      
+    window.speechSynthesis.speak(utterance); 
+    
+    // Liberar Wake Lock después de un tiempo
+    setTimeout(() => {
+        releaseWakeLock();
+    }, 5000);
 }
 
  
